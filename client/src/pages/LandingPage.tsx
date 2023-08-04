@@ -1,4 +1,5 @@
 import Footer from "../components/Footer"
+import MobileNavbar from "../components/MobileNavbar"
 import Navbar from "../components/Navbar"
 import Experience from "./Experience"
 
@@ -10,6 +11,7 @@ const LandingPage = () => {
             <div><Navbar/></div>
             <div style={{display: "flex", flexDirection: "column", margin: "5rem 0"}}><Experience/></div>
         
+            <div><MobileNavbar/></div>
         </div>
       <div><Footer/></div>
     </div>
