@@ -44,6 +44,10 @@ const LandingPage = () => {
         <section className="education"></section>
         
         
+        {/* --------------  Achievements  ------------ */}
+        <SectionTitle mainTitle={"Achievements"} subTitle={"Showoff Time ;)"}/>
+        <section className="achievements"></section>
+
 
       </div>
       <MobileNavbar />
