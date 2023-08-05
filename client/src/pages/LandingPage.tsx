@@ -49,6 +49,12 @@ const LandingPage = () => {
         <section className="achievements"></section>
 
 
+        {/* --------------  Tech Stacks  ------------ */}
+        <SectionTitle mainTitle={"Tech Stack"} subTitle={"My weapons ."}/>
+        <section className="techStack"></section>
+
+        
+
       </div>
       <MobileNavbar />
       <Footer /> 
