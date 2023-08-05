@@ -53,6 +53,10 @@ const LandingPage = () => {
         <SectionTitle mainTitle={"Tech Stack"} subTitle={"My weapons ."}/>
         <section className="techStack"></section>
 
+
+        {/* --------------  Projects  ------------ */}
+        <SectionTitle mainTitle={"Projects"} subTitle={"Stuffs I've Built ."}/>
+        <section className="project"></section>
         
 
       </div>
