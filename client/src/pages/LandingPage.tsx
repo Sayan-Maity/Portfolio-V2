@@ -38,6 +38,11 @@ const LandingPage = () => {
               
           </div>
         </section>
+
+        {/* --------------  Education  ------------ */}
+        <SectionTitle mainTitle={"Education"} subTitle={"Childhood Memories ."}/>
+        <section className="education"></section>
+        
         
 
       </div>
