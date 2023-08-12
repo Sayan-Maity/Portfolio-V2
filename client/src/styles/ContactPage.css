@@ -1,0 +1,234 @@
+body {
+  font-family: var(--font-family-main) !important;
+}
+
+.contactFormContainer {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 15px;
+  width: 1056px;
+  /* width: 100%; */
+  margin: 3rem 0;
+}
+.contactFormContainer .schedule {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+.contactFormContainer .schedule .emailSchedule {
+  border: 1px solid rgb(216, 216, 216);
+  margin-right: 1rem;
+  width: 100%;
+  padding: 2rem 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.contactFormContainer .schedule .emailSchedule .desc p,
+.contactFormContainer .schedule .topmateSchedule .desc p {
+  font-size: var(--font-size-regular);
+  font-weight: 500;
+  line-height: 2.5;
+}
+.contactFormContainer .schedule .emailSchedule .desc a,
+.contactFormContainer .schedule .topmateSchedule .desc a {
+  text-decoration: underline;
+  color: var(--font-color-dark);
+  /* font-size: 0.8rem; */
+  font-family: var(--font-family-main) !important;
+
+}
+.contactFormContainer .schedule .emailSchedule .desc a:hover,
+.contactFormContainer .schedule .topmateSchedule .desc a:hover {
+  text-decoration: underline;
+  color: var(--color-semilight);
+}
+.contactFormContainer .schedule .emailSchedule .icon {
+  background-color: var(--color-light);
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: var(--color-semilight);
+  margin-bottom: 1rem;
+}
+.contactFormContainer .schedule .topmateSchedule {
+  border: 1px solid rgb(216, 216, 216);
+  padding: 2rem 0;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.contactFormContainer .schedule .topmateSchedule .icon {
+  background-color: var(--color-light);
+  width: fit-content;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: var(--color-semilight);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1065px) {
+  .contactFormContainer {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    border-radius: 15px;
+    width: 100%;
+    margin: 3rem 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .contactFormContainer .schedule {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .contactFormContainer .schedule .emailSchedule {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .contactFormContainer {
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-radius: 15px;
+    width: 100%;
+    /* margin:  0; */
+  }
+}
+
+.contactFormContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactFormContainer form .rowdivv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+.contactFormContainer form .rowdivv label input {
+  width: 342px !important;
+  border-radius: 0.5rem;
+}
+.contactFormContainer form .rowdivv label:nth-child(1) input {
+  margin-right: 1rem;
+}
+.contactFormContainer form label input,
+.contactFormContainer form label textarea {
+  border: 1px solid rgb(216, 216, 216);
+  padding: 1rem;
+  width: 700px;
+  outline: none;
+  margin-bottom: 1rem;
+  font-size: var(--font-size-regular);
+  color: var(--font-color-dark);
+  border-radius: 0.5rem;
+}
+.contactFormContainer form label textarea {
+  resize: vertical;
+  font-family: var(--font-family-main) !important;
+}
+.contactFormContainer form label input:focus,
+.contactFormContainer form label textarea:focus {
+  border: 1px solid var(--color-semilight);
+}
+
+.contactFormContainer button {
+  width: fit-content;
+  padding: 1rem 6rem;
+  font-size: var(--font-size-regular);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-white);
+  background-color: var(--color-semilight);
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.contactFormContainer button:hover {
+  background-color: var(--color-dark);
+}
+
+@media (max-width: 720px) {
+  .contactFormContainer form {
+    width: 100%;
+  }
+  .contactFormContainer form .rowdivv label input {
+    width: 342px !important;
+  }
+  .contactFormContainer form .rowdivv label:nth-child(1) input {
+    margin-right: 0;
+    width: 342px !important;
+  }
+  .contactFormContainer form label input,
+  .contactFormContainer form label textarea {
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+  }
+  .contactFormContainer button {
+    padding: 0.6rem 1.6rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 830px) {
+  .contactFormContainer form .rowdivv label:nth-child(1) input {
+    margin-right: 0;
+  }
+  .contactFormContainer form .rowdivv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contactFormContainer form label input,
+  .contactFormContainer form label textarea {
+    width: 342px !important;
+  }
+}
+@media (max-width: 370px) {
+  .contactFormContainer form .rowdivv label input {
+    width: 242px !important;
+  }
+  .contactFormContainer form .rowdivv label:nth-child(1) input {
+    margin-right: 0;
+    width: 242px !important;
+  }
+  .contactFormContainer form label input,
+  .contactFormContainer form label textarea {
+    width: 242px !important;
+  }
+}
