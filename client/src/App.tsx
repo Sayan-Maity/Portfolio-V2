@@ -1,16 +1,19 @@
-import './App.css'
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LandingPage from './pages/LandingPage';
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import CustomRoutes from "./components/CustomRoutes";
+import { Toaster } from "react-hot-toast";
+import SEO from "./components/SEO";
 
 function App() {
-
   return (
+    <>
+      <Toaster />
       <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-        </Routes>
+        <SEO dynamicTitle="Sayan | Home" />
+        <CustomRoutes />
       </Router>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
