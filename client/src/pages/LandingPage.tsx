@@ -9,7 +9,6 @@ import {
   BsLinkedin,
   BsTwitter,
   BsInstagram,
-  BsFillCircleFill,
   BsDot,
   BsLink45Deg,
 } from "react-icons/bs";
@@ -18,11 +17,9 @@ import axios from "axios";
 import {
   AchievementItem,
   EducationItem,
-  ProjectItem,
   SocialLinkItem,
 } from "../types/FileTypes";
 import "atropos/atropos.css";
-import Atropos from "atropos/react";
 import FooterGap from "../components/FooterGap";
 import SEO from "../components/SEO";
 import ReadMore from "../components/ReadMore";
