@@ -56,7 +56,7 @@ const IndividualProject = () => {
                   </p>
                   <ul>
                     {customData?.description?.map(
-                      (description, index: number) => (
+                      (description: any, index: number) => (
                         <li key={index}>
                           {" "}
                           <p>{description}</p>
@@ -72,7 +72,7 @@ const IndividualProject = () => {
                     <b>Tech Stacks used : </b>
                   </p>
                   <div className="tech-stacks">
-                    {customData?.techstack?.map((techStack, index: number) => (
+                    {customData?.techstack?.map((techStack: any, index: number) => (
                       <p key={index}>{techStack}</p>
                     ))}
                   </div>

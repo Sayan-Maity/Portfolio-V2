@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IReadMoreProps } from "../types/PropTypes";
 
-const ReadMore = ({ text, maxCharacters, name }: IReadMoreProps) => {
+const ReadMore = ({ text, maxCharacters }: IReadMoreProps) => {
   const [showFullText, setShowFullText] = useState(false);
 
 
