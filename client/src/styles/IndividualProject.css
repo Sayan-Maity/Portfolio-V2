@@ -111,7 +111,7 @@
 .nextProject-left::after {
   content: "";
   height: 15rem;
-  width: 38rem;
+  width: 35rem;
   background-color: #ac75ff;
   position: absolute;
   top: 0;
@@ -143,3 +143,52 @@
 .nextProject-left .buttons button:focus {
   box-shadow: var(--boxShadow-focus);
 }
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .individualProject {
+    width: 100%;
+    overflow: hidden;
+  }
+  .nextProject-inner {
+    padding: 2rem !important;
+  }
+  .project-info {
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .project-info {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+  .project-info .left-info {
+    width: 100%;
+    padding: 0;
+    border-right: 0;
+  }
+  .project-info .right-info {
+    width: 100%;
+    padding: 0;
+  }
+
+  .nextProject-inner {
+    flex-direction: column;
+  }
+  .nextProject-left,
+.nextProject-right {
+  width: 100%;
+}
+
+}
+
+
+
+
+
+
+
+
+

@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import MobileNavbar from "../components/MobileNavbar";
 import SectionTitle from "../components/SectionTitle";
 import { BsLink45Deg } from "react-icons/bs";
+import ReadMore from "../components/ReadMore";
 
 const IndividualProject = () => {
   const location = useLocation();
@@ -45,7 +46,9 @@ const IndividualProject = () => {
               <div className="left-info">
                 <h1>{customData?.name}</h1>
                 <div className="summary">
-                  <p>{customData?.summary}</p>
+                  <p>
+                    <ReadMore text={customData?.summary} maxCharacters={160} />
+                  </p>
                 </div>
                 <div className="features">
                   <p style={{ fontSize: "1.2rem", margin: "2rem 0" }}>
@@ -118,7 +121,12 @@ const IndividualProject = () => {
                         <BsLink45Deg /> {customData?.name}
                       </b>
                     </Link>
-                    <p className="nextProject-summary">{customData?.summary}</p>
+                    <p className="nextProject-summary">
+                      <ReadMore
+                        text={customData?.summary}
+                        maxCharacters={160}
+                      />
+                    </p>
                     <div className="buttons">
                       <button
                         onClick={() =>
@@ -148,7 +156,10 @@ const IndividualProject = () => {
                       </b>
                     </Link>
                     <p className="nextProject-summary">
-                      {nextData[(index + 1) % nextData.length]?.summary}
+                      <ReadMore
+                        text={nextData[(index + 1) % nextData.length]?.summary}
+                        maxCharacters={160}
+                      />
                     </p>
                     <div className="buttons">
                       <button
