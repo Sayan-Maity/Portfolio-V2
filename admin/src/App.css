@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  /*  ====================  Color Palate  ====================  */
+  --color-dark: #773DC8;
+  --color-semilight: #8444DF;
+  --color-light: #eddfff;
+  --color-lighter: #F7F7F7;
+  --color-white: #FFFFFF;
+  
+  --font-color-dark: #333333;
+  --font-color-light: #5F6F81;
+  
+  
+  
+  /*  ====================  Typography  ====================  */
+  --font-family-main: 'Roboto', sans-serif;
+  
+  /*  ====================  Screen Size  ====================  */
+  --screen-size-original: 1080px;
+
+  /*
+  
+  --heading1-size: 72px;
+  --high-fidelity-color1: #0FAE96;
+  --wire-frame-color1: #000;
+  
+  */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-main);
+}
+
+
+/*  ==================  CUSTOM SCROLL BAR starts here !!  ==================  */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--color-light);
+  /* border-radius: 0.5rem; */
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--color-dark), var(--color-light));
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, var(--color-dark), var(--color-light));
+}
+
