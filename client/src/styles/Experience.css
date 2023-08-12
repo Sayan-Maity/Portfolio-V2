@@ -1,0 +1,362 @@
+
+/* ------------------------------  Volunteering + Internship + Open Source  ----------------------------- */
+
+.workExperience {
+  padding: 3rem;
+  background-color: var(--color-white);
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.169); */
+  width: var(--screen-size-original);
+  margin: auto;
+  display: flex;
+  gap: 3rem;
+  border-radius: 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.workExperience .experience1 {
+  background-color: var(--color-white);
+  border: 1px solid var(--border-color-regular);
+  padding: 2rem;
+  border-radius: 1rem;
+  gap: 1rem;
+  width: 60rem;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  top: 0;
+  transition: box-shadow 0.3s;
+  
+}
+
+
+/* ---------------------------  Company Logo Styling  ---------------------------- */
+/* .workExperience .experience1 .image img {
+  height: 100%;
+  width: 100%;
+}
+.workExperience .experience1 .image {
+  border-radius: 50% !important;
+  height: 5rem;
+  width: 5rem;
+  box-shadow: 0 0 20px rgba(168, 168, 168, 0.169);
+  background-color: var(--background-color-regular);
+  border: 1px solid rgb(240, 240, 240);
+} */
+/* ---------------------------  Company Logo Styling  ---------------------------- */
+
+.experience1 .details .company-role-or-name {
+  font-size: 1.5rem;
+  /* color: var(--color-dark); */
+  color: var(--font-color-dark);
+}
+.experience1 .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.experience1 .details .extra-internship-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem !important;
+}
+.experience1 .details .extra-internship-info p .extraInfo-icon {
+  /* color: var(--color-dark); */
+  color: var(--color-hightlighter);
+  /* color: #333; */
+}
+.experience1 .details .extra-internship-info p:nth-child(2) {
+  color: var(--font-color-light) !important;
+}
+.experience1 .details .name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.experience1 .details .name .title p:nth-child(1) {
+  /* color: red; */
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--font-color-dark);
+}
+.details .buttons {
+  margin-top: 0.5rem;
+  row-gap: 0.5rem !important;
+}
+.details .buttons a {
+  border: 1px solid var(--color-dark);
+  color: var(--color-dark);
+  font-weight: 500;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem !important;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+}
+.details .buttons a:focus {
+  box-shadow: var(--boxShadow-focus);
+
+}
+
+.experience1 .details .description li {
+  color: var(--font-color-dark);
+  font-size: 1.1rem;
+  margin-left: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.experience1 .details .tech-stack {
+  display: flex;
+  flex-direction: row;
+  /* margin-top: 1rem; */
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+}
+.techStack-buttons .buttons {
+  display: flex;
+  flex-direction: row;
+  row-gap: 0.5rem;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+.experience1 .details .tech-stack li {
+  list-style: none;
+  background-color: var(--color-light);
+  margin-right: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  color: var(--font-color-dark);
+}
+
+@media screen and (max-width: 1080px) {
+  .workExperience,
+  .certification,
+  .workExperience .experience1,
+  .experience1 .details,
+  .certification {
+    width: 100% !important;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .experience1 .details .name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .outer .card .info .description li {
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .workExperience {
+    padding: 0;
+  }
+}
+
+/* -----------------------------  Certification  ------------------------- */
+
+.certification {
+  padding: 3rem;
+  background-color: var(--color-white);
+  width: 66rem;
+  margin: auto;
+  display: flex;
+  gap: 3rem;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.certification1 {
+  background-color: var(--color-white);
+  border: 1px solid var(--border-color-regular);
+  padding: 1rem;
+  width: 30%;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.certification1 .certificate-image1 img {
+  border-radius: 10px;
+  height: 10rem;
+  width: 100%; 
+}
+.certification1 .certification-image {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.certification-details {
+  margin-top: 1rem;
+  padding: 0 0.2rem;
+}
+.certification-details .heading p {
+  font-weight: 600;
+  color: var(--font-color-dark);
+}
+.certification-details .heading p.certificate-credit {
+  font-weight: normal;
+  color: rgb(118, 118, 118);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 2rem;
+}
+.certification-details .buttons a {
+  color: var(--color-dark);
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--color-dark);
+  border-radius: 5px;
+  text-decoration: none;
+  line-height: 2;
+}
+.certification-details .buttons a:focus {
+  box-shadow: var(--boxShadow-focus);
+}
+
+
+
+
+.outer .card .info .description li b a {
+  text-decoration: underline;
+}
+@media screen and (max-width: 1080px) {
+  .workExperience,
+  .certification,
+  .workExperience .experience1,
+  .experience1 .details,
+  .certification {
+    width: 100% !important;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .certification1 {
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color-regular);
+    padding: 2rem;
+    width: 45%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .certification1 {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .certification1 {
+    width: 100%;
+  }
+  .certification {
+    padding: 0rem;
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .certification1 .certification-image {
+    display: none;
+  }
+  .certification1 {
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color-regular);
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+
+/*  ----------------------------  Timeline   -----------------------------  */
+
+/* Timeline Card Container */
+.timeline {
+  margin-left: 0.5rem;
+}
+.outer {
+  border-left: 1px solid var(--color-dark);
+}
+.card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--border-color-regular);
+  color: var(--font-color-dark);
+  border-radius: 8px;
+}
+.card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+.card .info .title-and-date{
+  display: flex;
+  justify-content: space-between;
+}
+.titlee {
+  color: var(--font-color-dark);
+  font-weight: bold;
+  position: relative;
+}
+.titlee::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-color: var(--color-white);
+  border-radius: 999px;
+  left: -56px;
+  border: 1px solid var(--color-dark);
+  box-shadow:0px 0px 5px 2px var(--color-hightlighter);
+}
+
+/* No Timeline Card Container */
+.noTimeline-card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--font-color-dark);
+  border-radius: 8px;
+}
+.noTimeline-card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+@media screen and (max-width: 550px) {
+  .card .info .title-and-date{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .workExperience-openSource {
+    padding: 0 !important;
+  }
+}
+
+
+
+/*  ---------------------------  Timeline  ----------------------------  */

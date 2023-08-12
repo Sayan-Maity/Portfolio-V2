@@ -1,53 +1,407 @@
-import { useEffect, useState } from "react"
-import axios from "axios"
-import { ExperienceItem } from "../types/FileTypes"
+import { useEffect, useState } from "react";
+import axios from "axios";
+import {
+  CertificateItem,
+  ExperienceItem,
+  OpenSourceItem,
+  VolunteerItem,
+} from "../types/FileTypes";
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import { BsBuilding, BsDot } from "react-icons/bs";
+import { MdOutlineAttachMoney } from "react-icons/md";
+import Navbar from "../components/Navbar";
+import MobileNavbar from "../components/MobileNavbar";
+import Footer from "../components/Footer";
+import SectionTitle from "../components/SectionTitle";
+import ParallaxComponent from "../components/ParallaxComponent";
+import "../styles/Experience.css";
+import { Link } from "react-router-dom";
+import FooterGap from "../components/FooterGap";
+import SEO from "../components/SEO";
 
 const Experience = () => {
-  const [experienceData, setExperienceData] = useState<ExperienceItem[]>([]) 
+  const [experienceData, setExperienceData] = useState<ExperienceItem[]>([]);
+  const [certificateData, setCertificateData] = useState<CertificateItem[]>([]);
+  const [volunteerData, setVolunteerData] = useState<VolunteerItem[]>([]);
+  const [openSourceData, setOpenSourceData] = useState<OpenSourceItem[]>([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/api/getExperience").then((res) => {
-      setExperienceData(res.data)
-      // console.log("inner =>", res.data)
-    }).catch((err) => {
-      console.log(err)
-    })
-  }, [])
+    axios
+      .get(`${import.meta.env.VITE_SERVER_URL}/getExperience`)
+      .then((res) => {
+        setExperienceData(res.data);
+        // console.log("inner =>", res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_SERVER_URL}/getCertification`)
+      .then((res) => {
+        setCertificateData(res.data);
+        // console.log("inner =>", res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_SERVER_URL}/getVolunteer`)
+      .then((res) => {
+        setVolunteerData(res.data);
+        // console.log("inner =>", res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${import.meta.env.VITE_SERVER_URL}/getOpenSource`)
+      .then((res) => {
+        setOpenSourceData(res.data);
+        // console.log("inner =>", res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
-    <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", width: "100%", gap: "2rem"}}>
-      
-      {/* <div style={{width: "100%"}}> */}
-        {experienceData.map((experience, index) => {
-            return (
-                <div key={index} style={{width: "60%", border: "1px solid #d3d3d3", padding: "1rem 2rem"}}>
-                    <img src={experience?.logoLink} alt={experience?.LogoName} height={80}/>
-                    <p>{experience?.companyName}</p>
-                    <p>{experience?.experienceDetails?.map((items) => {
-                        return (
-                            <p>{items}</p>
-                        )
-                    })}</p>
-                    <p>{experience?.location}</p>
-                    <p>{experience?.status}</p>
-                    <p>{experience?.role}</p>
-                    <p>{experience?.position}</p>
-                    <p>{experience?.startDate}</p>
-                    <p>{experience?.endDate}</p>
-                    <p>{experience?.techStack?.map((items) => {
-                        return (
-                            <p>{items}</p>
-                        )
-                    })}</p>
+    <div>
+      <Navbar />
+      <SEO dynamicTitle="Sayan | Experience" />
+      <div style={{ width: "100%", background: "#f4f4f4" }}>
+        <ParallaxComponent
+          title="Experience"
+          wallpaper="https://ik.imagekit.io/sayancr777/tr:w-1500/Portfolio/experienceBanner.png?updatedAt=1691398885800"
+        />
+
+        {/* --------------  Internships  ------------ */}
+        <SectionTitle mainTitle={"Internships"} summary={"Showoff Time ;)"} />
+        <div className="workExperience">
+          {experienceData
+            .slice()
+            .reverse()
+            .map((experience, index) => {
+              return (
+                <div className="experience1" key={index}>
+                  {/* <div className="image">
+                    <img
+                      className="image"
+                      src={experience?.logoLink}
+                      alt={experience?.LogoName}
+                      draggable={false}
+                    />
+                  </div> */}
+                  <div className="details">
+                    <div className="name">
+                      <div className="">
+                        <p className="company-role-or-name">
+                          <b>{experience?.role}</b>
+                        </p>
+                      </div>
+                      <div className="date">
+                        <p>
+                          {experience?.startDate} - {experience?.endDate}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="extra-internship-info">
+                      <p>
+                        <BsBuilding className="extraInfo-icon" />{" "}
+                        {experience?.companyName} <BsDot />{" "}
+                        {experience?.position}{" "}
+                      </p>
+                      <p>
+                        <HiOutlineLocationMarker className="extraInfo-icon" />{" "}
+                        {experience?.location} <BsDot /> {experience?.status}{" "}
+                      </p>
+                    </div>
+                    <div className="description">
+                      {experience?.experienceDetails?.map((items) => {
+                        return <li>{items}</li>;
+                      })}
+                    </div>
+                    <div className="tech-stack">
+                      {experience?.techStack?.map((items) => {
+                        return <li>{items}</li>;
+                      })}
+                    </div>
+                  </div>
                 </div>
-            )
-        })}
-      {/* </div> */}
-      
+              );
+            })}
+        </div>
 
+        {/* --------------  OPEN SOURCE  ------------ */}
+        <SectionTitle mainTitle={"Open Source"} summary={"Showoff Time"} />
+        <div className="workExperience workExperience-openSource">
+          {openSourceData
+            .slice()
+            .reverse()
+            .map((openSource, index) => (
+              <div key={index}>
+                {openSource.detail.length > 1 ? (
+                  <div className="experience1" key={index}>
+                    {/* <div className="image">
+                      <img
+                        className="image"
+                        src={openSource.logoLink}
+                        alt={openSource.name}
+                        draggable={false}
+                      />
+                    </div> */}
+                    <div className="details">
+                      <div className="name">
+                        <div className="">
+                          <p className="company-role-or-name">
+                            <b>{openSource.name}</b>
+                          </p>
+                        </div>
+                        <div className="date">
+                          <p>
+                            {openSource.startDate}, {openSource.endDate}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="timeline">
+                        <div className="outer">
+                          {openSource.detail
+                            .slice()
+                            .reverse()
+                            .map((detailItem, index) => (
+                              <div className="card" key={index}>
+                                <div className="info">
+                                  <div className="title-and-date">
+                                    <p className="titlee">
+                                      {detailItem.individualName}
+                                    </p>
+                                    <div className="date">
+                                      <p>{detailItem.individualStartDate}</p>
+                                    </div>
+                                  </div>
+                                  <div className="description">
+                                    {detailItem.description.map(
+                                      (descriptionItem, index) => (
+                                        <li key={index}>{descriptionItem}</li>
+                                      )
+                                    )}
+                                  </div>
+                                  <div className="techStack-buttons">
+                                    <div className="tech-stack">
+                                      {detailItem.techStack.map(
+                                        (techStackItem, index) => (
+                                          <li key={index}>{techStackItem}</li>
+                                        )
+                                      )}
+                                    </div>
+                                    <div className="buttons">
+                                      <Link
+                                        rel="noopener"
+                                        to={detailItem.links[0].repoLink}
+                                        target="_blank"
+                                      >
+                                        Repo{" "}
+                                      </Link>
+                                      <Link
+                                        rel="noopener"
+                                        to={
+                                          detailItem.links[0].contributionLink
+                                        }
+                                        target="_blank"
+                                      >
+                                        Contribution{" "}
+                                      </Link>
+                                      <Link
+                                        rel="noopener"
+                                        to={detailItem.links[0].certificateLink}
+                                        target="_blank"
+                                      >
+                                        Certificate{" "}
+                                      </Link>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="experience1" key={index}>
+                    {/* <div className="image">
+                      <img
+                        className="image"
+                        src={openSource.logoLink}
+                        alt={openSource.name}
+                        draggable={false}
+                      />
+                    </div> */}
+                    <div className="details">
+                      <div className="name">
+                        <div className="">
+                          <p className="company-role-or-name">
+                            <b>{openSource.name}</b>
+                          </p>
+                        </div>
+                        <div className="date">
+                          <p>
+                            {openSource.startDate}, {openSource.endDate}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="noTimeline-card">
+                        {openSource.detail.map((detailItem, index) => (
+                          <div className="info" key={index}>
+                            <div className="description">
+                              {detailItem.description.map(
+                                (descriptionItem, index) => (
+                                  <li key={index}>{descriptionItem}</li>
+                                )
+                              )}
+                            </div>
+                            <div className="techStack-buttons">
+                              <div className="tech-stack">
+                                {detailItem.techStack.map(
+                                  (techStackItem, index) => (
+                                    <li key={index}>{techStackItem}</li>
+                                  )
+                                )}
+                              </div>
+                              <div className="buttons">
+                                <Link
+                                  rel="noopener"
+                                  to={detailItem.links[0].repoLink}
+                                  target="_blank"
+                                >
+                                  Repo{" "}
+                                </Link>
+                                <Link
+                                  rel="noopener"
+                                  to={detailItem.links[0].contributionLink}
+                                  target="_blank"
+                                >
+                                  Contribution{" "}
+                                </Link>
+                                <Link
+                                  rel="noopener"
+                                  to={detailItem.links[0].certificateLink}
+                                  target="_blank"
+                                >
+                                  Certificate{" "}
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+        </div>
 
+        {/* -------------  VOLUNTEERING  ------------- */}
+        <SectionTitle mainTitle={"Volunteering"} summary={"My weapons ."} />
+        <div className="workExperience">
+          {volunteerData
+            .slice()
+            .reverse()
+            .map((volunteer, index) => (
+              <div className="experience1" key={index}>
+                {/* <div className="image">
+                  <img
+                    className="image"
+                    src={volunteer.logoLink}
+                    alt={volunteer.name}
+                  />
+                </div> */}
+                <div className="details">
+                  <div className="name">
+                    <div className="">
+                      <p className="company-role-or-name">
+                        <b>{volunteer.name}</b>
+                      </p>
+                    </div>
+                    <div className="date">
+                      <p>
+                        {volunteer.startDate} - {volunteer.endDate}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="description">
+                    {volunteer.detail.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </div>
+                  <div className="buttons">
+                    <Link to={volunteer.websiteLink} target="_blank">
+                      {" "}
+                      Website{" "}
+                    </Link>
+                    <Link to={volunteer.linkedinLink} target="_blank">
+                      {" "}
+                      Linkedin{" "}
+                    </Link>
+                    <Link to={volunteer.twitterLink} target="_blank">
+                      {" "}
+                      Twitter{" "}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+        </div>
+
+        {/* -------------  CERTIFICATION  ------------- */}
+        <SectionTitle
+          mainTitle={"Certification"}
+          summary={"Stuffs I've Built ."}
+        />
+        <div className=" certification">
+          {certificateData
+            .slice()
+            .reverse()
+            .map((certificate, index) => (
+              <div className="certification1" key={index}>
+                <div className="certification-image certificate-image1">
+                  <img
+                    src={certificate.imageLink}
+                    alt={certificate.name}
+                    draggable={false}
+                  />
+                </div>
+                <div className="certification-details">
+                  <div className="heading">
+                    <p>{certificate.name} </p>
+                    <p className="certificate-credit">
+                      - By {certificate.company}
+                    </p>
+                  </div>
+                  <div className="buttons">
+                    <Link to={certificate.certificateLink} target="_blank">
+                      <b>Certificate</b>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+        </div>
+      </div>
+      <MobileNavbar />
+      <FooterGap />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
