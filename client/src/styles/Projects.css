@@ -1,0 +1,136 @@
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project_main {
+  display: flex;
+  justify-content: center;
+}
+.project_outer {
+  display: flex;
+  flex-direction: column;
+  width: var(--screen-size-original);
+  gap: 3rem;
+}
+
+.project_inner {
+  display: flex;
+  justify-content: center !important;
+  padding: 2rem;
+  gap: 2rem;
+}
+.project_inner .left,
+.project_inner .right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.project_inner .left {
+  display: flex;
+  gap: 1rem;
+}
+.project_inner .left a {
+  text-decoration: none;
+  color: var(--color-dark);
+  border-radius: 5px;
+}
+.project_inner .left a:focus {
+  box-shadow: var(--boxShadow-focus);
+}
+.project_inner .left p {
+  font-size: var(--font-size-medium);
+}
+.project_inner .left .project-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.project_inner .left .project-buttons a,
+.project_inner .left .project-buttons button {
+  width: 50%;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.project_inner .left .project-buttons a {
+  background-color: var(--font-color-dark);
+  color: var(--color-white);
+}
+
+.project_inner .right img {
+  width: 100%;
+  border-radius: 20px;
+  transition: all 0.4s ease-out;
+  box-shadow: -5px 10px 20px var(--font-color-light);
+}
+.project_inner .right img:hover {
+  scale: 105%;
+}
+.project_inner .right {
+  z-index: 2;
+}
+
+.project_inner .left {
+  position: relative;
+  z-index: 1;
+}
+.project_inner .left::after {
+  content: "";
+  height: 15rem;
+  width: 34rem;
+  background-color: #ac75ff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  filter: blur(4rem);
+  transform: translate(30rem, 1rem);
+  border-radius: 50%;
+}
+
+.more-projects {
+  padding: 3rem 0 4rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+.more-projects a {
+  text-decoration: none;
+  color: var(--color-dark);
+  border-radius: 5px;
+}
+.more-projects a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1090px) {
+  .project_main {
+    overflow: hidden;
+  }
+  .project_outer {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .project_inner .left,
+  .project_inner .right {
+    width: 100%;
+  }
+  .project_inner {
+    flex-direction: column;
+    align-items: center;
+    /* padding: 5rem; */
+  }
+}
