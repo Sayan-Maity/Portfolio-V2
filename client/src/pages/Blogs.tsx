@@ -1,5 +1,4 @@
 import Footer from "../components/Footer";
-import FooterGap from "../components/FooterGap";
 import MobileNavbar from "../components/MobileNavbar";
 import Navbar from "../components/Navbar";
 import ParallaxComponent from "../components/ParallaxComponent";
