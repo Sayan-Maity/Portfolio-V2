@@ -1,0 +1,50 @@
+.parallaxMainStyle {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.outerParallax-div {
+  height: 100vh;
+  width: 100vw;
+  color: var(--color-white);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.innerParallax-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding-left: 10%; */
+    padding-bottom: 10%;
+    /* background-color: red; */
+    width: 1080px;
+    gap: 0.5rem;
+}
+.parallax-title-div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.parallax-title-div p {
+  font-size: clamp(1rem, 12vw + 1rem, 6rem);
+  font-weight: bold;
+}
+.breadcrumb {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+.breadcrumb a {
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  /* font-size: clamp(0.8rem, 12vw + 0.2rem, 1.5rem); */
+}
+.breadcrumb a:nth-child(1) {
+  color: #676767;
+}
+.breadcrumb a:nth-child(2) {
+  color: var(--color-white);
+}
