@@ -1,0 +1,14 @@
+.aurora-BlogDiv img {
+  z-index: 2 !important;
+}
+.aurora-BlogDiv::before {
+  content: "";
+  height: 12rem;
+  width: 12rem;
+  background-color: var(--color-dark);
+  border-radius: 50%;
+  /* transform: translate(-1rem, 18rem); */
+  z-index: 1 !important;
+  position: absolute;
+  filter: blur(2rem);
+}
