@@ -8,7 +8,6 @@ import {
 } from "../types/FileTypes";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BsBuilding, BsDot } from "react-icons/bs";
-import { MdOutlineAttachMoney } from "react-icons/md";
 import Navbar from "../components/Navbar";
 import MobileNavbar from "../components/MobileNavbar";
 import Footer from "../components/Footer";
