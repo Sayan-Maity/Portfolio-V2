@@ -125,13 +125,13 @@ const Experience = () => {
                       </p>
                     </div>
                     <div className="description">
-                      {experience?.experienceDetails?.map((items) => {
-                        return <li>{items}</li>;
+                      {experience?.experienceDetails?.map((items, index) => {
+                        return <li key={index}>{items}</li>;
                       })}
                     </div>
                     <div className="tech-stack">
-                      {experience?.techStack?.map((items) => {
-                        return <li>{items}</li>;
+                      {experience?.techStack?.map((items, index) => {
+                        return <li key={index}>{items}</li>;
                       })}
                     </div>
                   </div>
