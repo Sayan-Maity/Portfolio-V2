@@ -11,7 +11,6 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const [socialLinkData, setSocialLinkData] = useState<SocialLinkItem[]>([]);
 
-  
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getSocialLink`)
@@ -24,16 +23,19 @@ const Footer = () => {
       });
   }, []);
   return (
-
     <footer>
       <div className="footer">
         <p className="footer__copyright">
-          <BiCopyright className="copyrightIcon" />
           <span className="footer__sayan-maity">
-            <span id="year">{currentYear} </span>
-            <a href="/">Sayan Maity</a> |{" "}
-          </span>{" "}
-          Made with <AiTwotoneHeart className="heartIcon" />
+            <span id="year">
+              <BiCopyright className="copyrightIcon" /> {currentYear}{" "}
+            </span>
+            <a href="/">Sayan Maity</a>
+          </span>
+          <span>|</span>
+          <span>
+            Made with <AiTwotoneHeart className="heartIcon" />
+          </span>
         </p>
         <p className="buymeacoffee">
           <a

@@ -12,12 +12,12 @@ footer .footer p {
   align-items: center;
   display: flex;
 }
-i.bx-copyright {
-  padding-right: 0.2rem;
-}
 span.footer__sayan-maity {
+  display: flex;
+  align-items: center;
   padding-right: 0.3rem;
 }
+
 span.footer__sayan-maity a {
   text-decoration: none;
   color: var(--font-color-dark);
@@ -42,13 +42,25 @@ span.footer__sayan-maity a:hover {
   box-shadow: var(--boxShadow-focus);
 }
 
-
 .copyrightIcon {
   font-size: 1.5rem !important;
   padding-right: 0.2rem;
 }
 .footer__copyright {
+  display: flex;
+  align-items: center;
   color: var(--font-color-dark) !important;
+}
+.footer__copyright span:nth-child(1),
+.footer__copyright span:nth-child(2),
+.footer__copyright span:nth-child(3) {
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+  gap: 0.2rem;
+}
+.footer__copyright span:nth-child(2) {
+  margin-right: 0.3rem;
 }
 .buymeacoffee a {
   display: flex;
@@ -86,5 +98,14 @@ span.footer__sayan-maity a:hover {
   footer .footer {
     margin-bottom: 2.8rem;
     gap: 0.5rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .footer__copyright span:nth-child(2) {
+    display: none;
+  }
+  .footer__copyright {
+    display: flex;
+    flex-direction: column;
   }
 }
