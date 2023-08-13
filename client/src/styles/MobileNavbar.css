@@ -12,6 +12,6 @@
 }
 @media (max-width: 400px) {
     .mobileNavItem-label {
-        display: none;
+        /* display: none; */
     }
 }
