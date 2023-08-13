@@ -70,13 +70,23 @@ export interface VolunteerItem {
 export interface OpenSourceItem {
   name: string;
   logoLink: string;
-  websiteLink: string;
-  twitterLink: string;
-  linkedinLink: string;
-  detail: string[];
   startDate: string;
   endDate: string;
-  individualName: string;
+  detail: [
+    {
+      individualName: string;
+      individualStartDate: string;
+      description: string[];
+      techStack: string[];
+      links: [
+        {
+          repoLink: string;
+          contributionLink: string;
+          certificateLink: string;
+        }
+      ];
+    }
+  ];
 }
 export interface SocialLinkItem {
   links: [
