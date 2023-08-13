@@ -104,3 +104,8 @@ export interface SocialLinkItem {
 export interface MobileIconComponentsItem {
   [iconName: string]: IconType;
 }
+
+  export interface ParallaxItem {
+    title: string;
+    wallpaper: string;
+  }
