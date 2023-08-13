@@ -49,6 +49,7 @@ const MobileNavbar = () => {
                   fontSize: "1rem",
                   textDecoration: "none",
                   gap: "0.3rem",
+                  color: "var(--font-color-dark)",
                 }}
               >
                 <IconComponent style={{fontSize: "1.2rem", color: "var(--font-color-dark)"}}/>
