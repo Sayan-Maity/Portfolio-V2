@@ -124,16 +124,16 @@ const Experience = () => {
                         {experience?.location} <BsDot /> {experience?.status}{" "}
                       </p>
                     </div>
-                    <div className="description">
+                    <ul className="description">
                       {experience?.experienceDetails?.map((items, index) => {
                         return <li key={index}>{items}</li>;
                       })}
-                    </div>
-                    <div className="tech-stack">
+                    </ul>
+                    <ul className="tech-stack">
                       {experience?.techStack?.map((items, index) => {
                         return <li key={index}>{items}</li>;
                       })}
-                    </div>
+                    </ul>
                   </div>
                 </div>
               );
@@ -187,13 +187,13 @@ const Experience = () => {
                                       <p>{detailItem.individualStartDate}</p>
                                     </div>
                                   </div>
-                                  <div className="description">
+                                  <ul className="description">
                                     {detailItem.description.map(
                                       (descriptionItem, index) => (
                                         <li key={index}>{descriptionItem}</li>
                                       )
                                     )}
-                                  </div>
+                                  </ul>
                                   <div className="techStack-buttons">
                                     <div className="tech-stack">
                                       {detailItem.techStack.map(
@@ -261,21 +261,21 @@ const Experience = () => {
                       <div className="noTimeline-card">
                         {openSource.detail.map((detailItem, index) => (
                           <div className="info" key={index}>
-                            <div className="description">
+                            <ul className="description">
                               {detailItem.description.map(
                                 (descriptionItem, index) => (
                                   <li key={index}>{descriptionItem}</li>
                                 )
                               )}
-                            </div>
+                            </ul>
                             <div className="techStack-buttons">
-                              <div className="tech-stack">
+                              <ul className="tech-stack">
                                 {detailItem.techStack.map(
                                   (techStackItem, index) => (
                                     <li key={index}>{techStackItem}</li>
                                   )
                                 )}
-                              </div>
+                              </ul>
                               <div className="buttons">
                                 <Link
                                   rel="noopener"
@@ -338,11 +338,11 @@ const Experience = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="description">
+                  <ul className="description">
                     {volunteer.detail.map((item, index) => (
                       <li key={index}>{item}</li>
                     ))}
-                  </div>
+                  </ul>
                   <div className="buttons">
                     <Link to={volunteer.websiteLink} target="_blank">
                       {" "}
