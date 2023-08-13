@@ -421,7 +421,7 @@ const LandingPage = () => {
           </div>
         </section>
       </div>
-      {/* <MobileNavbar /> */}
+      <MobileNavbar />
       <FooterGap />
       <Footer />
     </div>
