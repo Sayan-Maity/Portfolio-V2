@@ -35,7 +35,7 @@ const Experience = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [experienceData]);
 
   useEffect(() => {
     axios
@@ -47,7 +47,7 @@ const Experience = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [certificateData]);
 
   useEffect(() => {
     axios
@@ -59,7 +59,7 @@ const Experience = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [volunteerData]);
 
   useEffect(() => {
     axios
@@ -71,7 +71,7 @@ const Experience = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [openSourceData]);
 
   return (
     <div>
