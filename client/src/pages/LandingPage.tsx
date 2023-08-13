@@ -107,17 +107,9 @@ const LandingPage = () => {
               <h1 className="title">Sayan</h1>
               <p className="third-title">
                 {" "}
-                ... from sketches to code, bringing designs to life with passion
-                !
+                ... from sketches to code, bringing designs to life with passion !
               </p>
             </div>
-
-            {/* <div className="home__image" style={{display: "flex", width: "50%"}}>
-                <div className="home__solid"></div>
-                <div className="home__frame"></div>
-                <div className="home__stripe"></div>
-                <div className="home__pic"></div>
-              </div> */}
           </div>
         </div>
 
@@ -429,7 +421,7 @@ const LandingPage = () => {
           </div>
         </section>
       </div>
-      <MobileNavbar />
+      {/* <MobileNavbar /> */}
       <FooterGap />
       <Footer />
     </div>
