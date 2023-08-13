@@ -11,6 +11,7 @@ import ReadMore from "../components/ReadMore";
 import axios from "axios";
 import { BsLink45Deg } from "react-icons/bs";
 import "../styles/Projects.css";
+import parallaxItems from "../constants/ParallaxItems";
 
 const Projects = () => {
   const [projectLoopData, setProjectLoopData] = useState<any[]>([]);
@@ -46,8 +47,8 @@ const Projects = () => {
       <SEO dynamicTitle="Sayan | Projects" />
       <div style={{ width: "100%", background: "#f4f4f4" }}>
         <ParallaxComponent
-          title="Projects"
-          wallpaper="https://ik.imagekit.io/sayancr777/Portfolio/tr:w-1500/pexels-vincent-ma-janssen-2302802%201.png?updatedAt=1691860720522"
+          title={parallaxItems[0].title}
+          wallpaper={parallaxItems[0].wallpaper}
         />
         <SectionTitle
           mainTitle="Projects"

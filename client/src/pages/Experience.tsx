@@ -17,6 +17,7 @@ import "../styles/Experience.css";
 import { Link } from "react-router-dom";
 import FooterGap from "../components/FooterGap";
 import SEO from "../components/SEO";
+import parallaxItems from "../constants/ParallaxItems";
 
 const Experience = () => {
   const [experienceData, setExperienceData] = useState<ExperienceItem[]>([]);
@@ -78,8 +79,8 @@ const Experience = () => {
       <SEO dynamicTitle="Sayan | Experience" />
       <div style={{ width: "100%", background: "#f4f4f4" }}>
         <ParallaxComponent
-          title="Experience"
-          wallpaper="https://ik.imagekit.io/sayancr777/tr:w-1500/Portfolio/experienceBanner.png?updatedAt=1691398885800"
+          title={parallaxItems[1].title}
+          wallpaper={parallaxItems[1].wallpaper}
         />
 
         {/* --------------  Internships  ------------ */}

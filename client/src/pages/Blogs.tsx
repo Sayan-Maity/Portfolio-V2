@@ -5,6 +5,7 @@ import ParallaxComponent from "../components/ParallaxComponent";
 import "../styles/BlogPage.css";
 import ComingSoon from "../assets/comingSoon.webp";
 import SEO from "../components/SEO";
+import parallaxItems from "../constants/ParallaxItems";
 
 const Contact = () => {
   return (
@@ -13,8 +14,8 @@ const Contact = () => {
       <SEO dynamicTitle="Sayan | Blogs" />
       <div style={{ width: "100%", background: "#f4f4f4" }}>
         <ParallaxComponent
-          title="Blogs"
-          wallpaper="https://ik.imagekit.io/sayancr777/tr:w-1500/Portfolio/blogBanner.png?updatedAt=1691399103917"
+          title={parallaxItems[3].title}
+          wallpaper={parallaxItems[3].wallpaper}
         />
         <div
           className="aurora-BlogDiv"

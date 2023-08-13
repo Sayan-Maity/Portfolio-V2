@@ -10,6 +10,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import FooterGap from "../components/FooterGap";
 import SEO from "../components/SEO";
+import parallaxItems from "../constants/ParallaxItems";
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("");
@@ -63,8 +64,8 @@ const Contact = () => {
       <SEO dynamicTitle="Sayan | Contact" />
       <div style={{ width: "100%", background: "#f4f4f4" }}>
         <ParallaxComponent
-          title="Contact"
-          wallpaper="https://ik.imagekit.io/sayancr777/tr:w-1000/Portfolio/contactBanner.png?updatedAt=1691398768983"
+          title={parallaxItems[2].title}
+          wallpaper={parallaxItems[2].wallpaper}
         />
 
         <div
