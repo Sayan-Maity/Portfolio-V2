@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
 import Experience from "../pages/Experience";
@@ -5,8 +6,16 @@ import Contact from "../pages/Contact";
 import Blogs from "../pages/Blogs";
 import Projects from "../pages/Projects";
 import IndividualProject from "../pages/IndividualProject";
+import { hotjar } from "react-hotjar";
 
 const CustomRoutes = () => {
+  useEffect(() => {
+    hotjar.initialize(
+      import.meta.env.VITE_HOTJAR_SITEID,
+      import.meta.env.VITE_HOTJAR_VERSION
+    );
+  });
+
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
