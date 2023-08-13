@@ -18,7 +18,7 @@ function App() {
       import.meta.env.VITE_HOTJAR_SITEID,
       import.meta.env.VITE_HOTJAR_VERSION
     );
-  });
+  }, []);
 
   return (
     <>
