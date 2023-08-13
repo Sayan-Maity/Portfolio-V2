@@ -26,13 +26,13 @@ function App() {
       <Router>
         <SEO dynamicTitle="Sayan | Home" />
         <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/experience" element={<Experience />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/blogs" element={<Blogs />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/projects/:name" element={<IndividualProject />} />
-    </Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:name" element={<IndividualProject />} />
+        </Routes>
       </Router>
     </>
   );
