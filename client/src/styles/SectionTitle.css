@@ -23,9 +23,6 @@
   height: 6rem;
   background-color: var(--color-dark);
   border-radius: 50%;
-  /* top: 0; */
-  /* left: 0; */
-  /* filter: blur(90px); */
   filter: blur(7rem);
 }
 
@@ -59,5 +56,11 @@
 @media screen and (max-width: 600px) {
   .absoluteTitle {
     display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gradient-aurora {
+    width: 100%;
   }
 }
