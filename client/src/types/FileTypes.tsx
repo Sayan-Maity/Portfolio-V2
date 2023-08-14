@@ -105,7 +105,24 @@ export interface MobileIconComponentsItem {
   [iconName: string]: IconType;
 }
 
-  export interface ParallaxItem {
-    title: string;
-    wallpaper: string;
-  }
+export interface ParallaxItem {
+  title: string;
+  wallpaper: string;
+}
+
+interface SectionTitleItemSubItem {
+  mainTitle: string;
+  summary: string;
+}
+
+export interface SectionTitleItem {
+  aboutMe: SectionTitleItemSubItem;
+  education: SectionTitleItemSubItem;
+  achievements: SectionTitleItemSubItem;
+  projects: SectionTitleItemSubItem;
+  nextProject: SectionTitleItemSubItem;
+  internships: SectionTitleItemSubItem;
+  openSource: SectionTitleItemSubItem;
+  volunteering: SectionTitleItemSubItem;
+  certification: SectionTitleItemSubItem;
+}

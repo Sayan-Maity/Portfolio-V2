@@ -8,6 +8,7 @@ import MobileNavbar from "../components/MobileNavbar";
 import SectionTitle from "../components/SectionTitle";
 import { BsLink45Deg } from "react-icons/bs";
 import ReadMore from "../components/ReadMore";
+import sectionTitleItems from "../constants/SectionTitleItems";
 
 const IndividualProject = () => {
   const location = useLocation();
@@ -103,10 +104,8 @@ const IndividualProject = () => {
 
             <div className="nextProject">
               <SectionTitle
-                mainTitle={"Next Project"}
-                summary={
-                  "This is not the only project I made, check out this other project that this page randomly chose for you to see, hope you'll like it. And if you don't go back to the projects page to see all the projects I have built so far."
-                }
+                mainTitle={sectionTitleItems?.nextProject?.mainTitle}
+                summary={sectionTitleItems?.nextProject?.summary}
               />
 
               {nextData?.length <= index + 1 ? (

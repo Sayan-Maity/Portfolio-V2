@@ -12,6 +12,7 @@ import axios from "axios";
 import { BsLink45Deg } from "react-icons/bs";
 import "../styles/Projects.css";
 import parallaxItems from "../constants/ParallaxItems";
+import sectionTitleItems from "../constants/SectionTitleItems";
 
 const Projects = () => {
   const [projectLoopData, setProjectLoopData] = useState<any[]>([]);
@@ -51,8 +52,8 @@ const Projects = () => {
           wallpaper={parallaxItems[0].wallpaper}
         />
         <SectionTitle
-          mainTitle="Projects"
-          summary="Take a look at these projects I made in the name of Software Development. Honestly I am quite proud how most of them turned out. Most of them are available on Github so go ahead knock yourself out! The others are client/freelance projects."
+          mainTitle={sectionTitleItems?.projects?.mainTitle}
+          summary={sectionTitleItems?.projects?.summary}
         />
         <section className="projects-page">
           <div className="project_main">

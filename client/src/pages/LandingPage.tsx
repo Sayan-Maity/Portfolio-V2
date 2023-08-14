@@ -23,6 +23,7 @@ import "atropos/atropos.css";
 import FooterGap from "../components/FooterGap";
 import SEO from "../components/SEO";
 import ReadMore from "../components/ReadMore";
+import sectionTitleItems from "../constants/SectionTitleItems";
 
 const LandingPage = () => {
   const [educationData, setEducationData] = useState<EducationItem[]>([]);
@@ -115,10 +116,8 @@ const LandingPage = () => {
 
         {/* --------------  About Me  ------------ */}
         <SectionTitle
-          mainTitle={"About Me"}
-          summary={
-            "I don't like to brag too much but here's 2 cent of myself I've written, Enjoy reading it 😉"
-          }
+          mainTitle={sectionTitleItems?.aboutMe?.mainTitle}
+          summary={sectionTitleItems?.aboutMe?.summary}
         />
         <section
           className="aboutMe"
@@ -219,8 +218,8 @@ const LandingPage = () => {
 
         {/* --------------  Education  ------------ */}
         <SectionTitle
-          mainTitle={"Education"}
-          summary={"Childhood Memories ."}
+          mainTitle={sectionTitleItems?.education?.mainTitle}
+          summary={sectionTitleItems?.education?.summary}
         />
         <section
           className="education"
@@ -327,7 +326,7 @@ const LandingPage = () => {
         </section>
 
         {/* --------------  Achievements  ------------ */}
-        <SectionTitle mainTitle={"Achievements"} summary={"Showoff Time ;)"} />
+        <SectionTitle mainTitle={sectionTitleItems?.achievements?.mainTitle} summary={sectionTitleItems?.achievements?.summary} />
         <section
           className="achievements"
           style={{
@@ -361,7 +360,7 @@ const LandingPage = () => {
         </section>
 
         {/* --------------  Projects  ------------ */}
-        <SectionTitle mainTitle={"Projects"} summary={"Stuffs I've Built ."} />
+        <SectionTitle mainTitle={sectionTitleItems?.projects?.mainTitle} summary={sectionTitleItems?.projects?.summary} />
         <section
           style={{
             display: "flex",

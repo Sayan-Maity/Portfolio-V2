@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 import FooterGap from "../components/FooterGap";
 import SEO from "../components/SEO";
 import parallaxItems from "../constants/ParallaxItems";
+import sectionTitleItems from "../constants/SectionTitleItems";
 
 const Experience = () => {
   const [experienceData, setExperienceData] = useState<ExperienceItem[]>([]);
@@ -84,7 +85,7 @@ const Experience = () => {
         />
 
         {/* --------------  Internships  ------------ */}
-        <SectionTitle mainTitle={"Internships"} summary={"Showoff Time ;)"} />
+        <SectionTitle mainTitle={sectionTitleItems?.internships?.mainTitle} summary={sectionTitleItems?.internships?.summary} />
         <div className="workExperience">
           {experienceData
             .slice()
@@ -141,7 +142,7 @@ const Experience = () => {
         </div>
 
         {/* --------------  OPEN SOURCE  ------------ */}
-        <SectionTitle mainTitle={"Open Source"} summary={"Showoff Time"} />
+        <SectionTitle mainTitle={sectionTitleItems?.openSource?.mainTitle} summary={sectionTitleItems?.openSource?.summary} />
         <div className="workExperience workExperience-openSource">
           {openSourceData
             .slice()
@@ -311,7 +312,7 @@ const Experience = () => {
         </div>
 
         {/* -------------  VOLUNTEERING  ------------- */}
-        <SectionTitle mainTitle={"Volunteering"} summary={"My weapons ."} />
+        <SectionTitle mainTitle={sectionTitleItems?.volunteering?.mainTitle} summary={sectionTitleItems?.volunteering?.summary} />
         <div className="workExperience">
           {volunteerData
             .slice()
@@ -364,8 +365,8 @@ const Experience = () => {
 
         {/* -------------  CERTIFICATION  ------------- */}
         <SectionTitle
-          mainTitle={"Certification"}
-          summary={"Stuffs I've Built ."}
+          mainTitle={sectionTitleItems?.certification?.mainTitle}
+          summary={sectionTitleItems?.certification?.summary}
         />
         <div className=" certification">
           {certificateData
