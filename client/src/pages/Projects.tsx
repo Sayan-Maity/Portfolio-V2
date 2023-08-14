@@ -31,7 +31,7 @@ const Projects = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [originalLoopData]);
+  }, []);
   console.log("projectLoopData =>", projectLoopData);
 
   const navigateWithData = (data: any, wholeData: any, index: number) => {

@@ -43,7 +43,7 @@ const LandingPage = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [educationData]);
+  }, []);
 
   useEffect(() => {
     axios
@@ -56,7 +56,7 @@ const LandingPage = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [projectLoopData]);
+  }, []);
   console.log("projectLoopData =>", projectLoopData);
 
   useEffect(() => {
@@ -69,7 +69,7 @@ const LandingPage = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [achievementData]);
+  }, []);
 
   useEffect(() => {
     axios
@@ -81,7 +81,7 @@ const LandingPage = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [socialLinkData]);
+  }, []);
 
   const navigateWithData = (data: any, wholeData: any, index: number) => {
     navigate(`/projects/${data?.name}`, {
