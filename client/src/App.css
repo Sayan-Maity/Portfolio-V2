@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,500;10..48,600;10..48,700&family=Caprasimo&family=Cherry+Bomb+One&family=Comfortaa:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,500;9..40,600;9..40,700&family=Dancing+Script:wght@500;600;700&family=Lobster&family=Merriweather:wght@400;700&family=Noto+Serif:wght@500;600;700&family=Pacifico&display=swap');
+
 :root {
   /*  ====================  Color Palate  ====================  */
   --color-dark: #773DC8;
@@ -28,6 +30,8 @@
   
   /*  ======================  Typography  ======================  */
   --font-family-main: 'Roboto', sans-serif;
+  /* --font-family-main: 'Comfortaa', cursive ; */
+  --font-size-large: 1.5rem;
   --font-size-regular: 1.2rem;
   --font-size-medium: 1.1rem;
   --font-size-small: 1rem;
@@ -52,6 +56,8 @@
 
 body {
   font-family: var(--font-family-main);
+  /* font-family: 'Comfortaa', cursive ; */
+
 }
 
 
