@@ -1,14 +1,96 @@
-.aurora-BlogDiv img {
-  z-index: 2 !important;
+.blog_outerDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+    gap: 2rem;
 }
-.aurora-BlogDiv::before {
-  content: "";
-  height: 12rem;
-  width: 12rem;
-  background-color: var(--color-dark);
-  border-radius: 50%;
-  /* transform: translate(-1rem, 18rem); */
-  z-index: 1 !important;
-  position: absolute;
-  filter: blur(2rem);
+
+.blog_innerDiv {
+  border: 1px solid var(--border-color-regular);
+  padding: 3rem;
+  border-radius: 20px;
+  width: var(--screen-size-original);
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-white);
+  gap: 2rem;
+}
+.blog_innerDiv .blog-left {
+  width: 30%;
+  object-fit: cover;
+}
+.blog_innerDiv .blog-left img {
+  border: 1px solid var(--border-color-regular);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.blog_innerDiv .blog-right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.blog_innerDiv .blog-right .time-date,
+.blog_innerDiv .blog-right .blog-title-source {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.blog_innerDiv .blog-right .blog-title-source a {
+  font-size: var(--font-size-large);
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  border-radius: 5px;
+}
+.blog_innerDiv .blog-right .blog-title-source a:hover {
+  text-decoration: underline;
+}
+.blog_innerDiv .blog-right .blog-title-source a:focus {
+box-shadow: var(--boxShadow-focus);}
+.blog_innerDiv .blog-right .blog-title-source .blog-source {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+
+.blog_innerDiv .blog-right .blog-title {
+  display: flex;
+  align-items: center;
+}
+.blog_innerDiv .blog-right .time-date {
+  color: var(--font-color-light);
+}
+
+
+
+
+
+@media screen and (max-width: 1080px) {
+  .blog_innerDiv {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .blog_innerDiv {
+    gap: 0;
+  }
+  .blog_innerDiv .blog-left {
+    width: 0;
+    
+  }
+  .blog_innerDiv .blog-right {
+    width: 100%;
+  }
+  .blog_innerDiv .blog-left img {
+    display: none;
+  }
 }
