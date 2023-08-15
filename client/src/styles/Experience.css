@@ -2,13 +2,13 @@
 /* ------------------------------  Volunteering + Internship + Open Source  ----------------------------- */
 
 .workExperience {
-  padding: 3rem;
-  background-color: var(--color-white);
+  padding: 0 !important;
+  /* background-color: var(--color-white); */
   /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.169); */
   width: var(--screen-size-original);
   margin: auto;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   border-radius: 1rem;
   flex-direction: column;
   flex-wrap: wrap;
@@ -16,7 +16,7 @@
 .workExperience .experience1 {
   background-color: var(--color-white);
   border: 1px solid var(--border-color-regular);
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 1rem;
   gap: 1rem;
   width: 60rem;
@@ -170,10 +170,11 @@
 .certification {
   padding: 3rem;
   background-color: var(--color-white);
-  width: 66rem;
+  border: 1px solid var(--border-color-regular);
+  width: var(--screen-size-original);
   margin: auto;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   border-radius: 1rem;
   flex-wrap: wrap;
   flex-direction: row;
@@ -191,6 +192,7 @@
   text-align: center;
 }
 .certification1 .certificate-image1 img {
+  object-fit: cover;
   border-radius: 10px;
   height: 10rem;
   width: 100%; 
@@ -248,7 +250,7 @@
   .certification1 {
     background-color: var(--color-white);
     border: 1px solid var(--border-color-regular);
-    padding: 2rem;
+    /* padding: 2rem; */
     width: 45%;
     border-radius: 1rem;
     display: flex;
@@ -271,6 +273,7 @@
   .certification {
     padding: 0rem;
     gap: 1.5rem;
+    background-color: transparent !important;
   }
 }
 @media screen and (max-width: 340px) {

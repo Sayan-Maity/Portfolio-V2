@@ -10,9 +10,11 @@ body {
   align-items: center;
   padding: 3rem;
   border-radius: 15px;
-  width: 1056px;
+  width: var(--screen-size-original);
   /* width: 100%; */
   margin: 3rem 0;
+  border: 1px solid var(--border-color-regular);
+
 }
 .contactFormContainer .schedule {
   display: flex;
@@ -24,7 +26,7 @@ body {
   padding: 1rem;
 }
 .contactFormContainer .schedule .emailSchedule {
-  border: 1px solid rgb(216, 216, 216);
+  border: 1px solid var(--border-color-regular);
   margin-right: 1rem;
   width: 100%;
   padding: 2rem 0;
@@ -62,7 +64,7 @@ body {
   margin-bottom: 1rem;
 }
 .contactFormContainer .schedule .topmateSchedule {
-  border: 1px solid rgb(216, 216, 216);
+  border: 1px solid var(--border-color-regular);
   padding: 2rem 0;
   width: 100%;
   align-items: center;
@@ -147,7 +149,7 @@ body {
 }
 .contactFormContainer form label input,
 .contactFormContainer form label textarea {
-  border: 1px solid rgb(216, 216, 216);
+  border: 1px solid var(--border-color-regular);
   padding: 1rem;
   width: 700px;
   outline: none;

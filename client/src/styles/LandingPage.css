@@ -1,3 +1,11 @@
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,500;10..48,600;10..48,700&family=Caprasimo&family=Cherry+Bomb+One&family=Comfortaa:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,500;9..40,600;9..40,700&family=Dancing+Script:wght@500;600;700&family=Lobster&family=Merriweather:wght@400;700&family=Noto+Serif:wght@500;600;700&family=Pacifico&display=swap');
+
+
+
+
 /* -----------------------  Landing Page Typography Styling  ---------------------- */
 .landing-div {
   width: 100%;
@@ -14,14 +22,25 @@
 }
 .landing-div .first-title {
   font-size: 6rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
   line-height: 0.5;
 }
 .landing-div .title {
+
+  /* font-family: 'Bricolage Grotesque', sans-serif; */
+  /* font-family: 'Caprasimo', cursive; */
+  /* font-family: 'Cherry Bomb One', cursive; */
+  font-family: 'Comfortaa', cursive;
+  /* font-family: 'Dancing Script', cursive; */
+  /* font-family: 'DM Sans', sans-serif; */
+  /* font-family: 'Lobster', cursive; */
+  /* font-family: 'Merriweather', serif; */
+  /* font-family: 'Noto Serif', serif; */
+  /* font-family: 'Pacifico', cursive; */
+
+
   color: transparent;
   font-size: 18rem;
-  -webkit-text-stroke: 2px black;
+  -webkit-text-stroke: 2px var(--font-color-dark);
 }
 .landing-div .third-title {
     font-size: 2rem;
@@ -113,6 +132,7 @@
   z-index: 2 !important;
 }
 .outerDiv-aboutMe .profile-image img {
+  object-fit: cover;
   box-shadow: -5px 10px 20px var(--font-color-light);
   transition: all 0.4s ease-out;
   width: 100%;
@@ -221,16 +241,16 @@
   display: flex;
   flex-direction: column;
   width: var(--screen-size-original) !important;
-  background-color: var(--color-white) !important;
   border-radius: 15px;
-  padding: 3rem;
-  gap: 3rem;
+  /* padding: 3rem; */
+  gap: 2rem;
 }
 .education_inner {
+  background-color: var(--color-white) !important;
   display: flex;
   justify-content: center !important;
   border: 1px solid rgb(218, 218, 218);
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 15px;
   gap: 1rem;
 }
@@ -329,12 +349,12 @@
   width: var(--screen-size-original);
   background-color: var(--color-white);
   border-radius: 15px;
-  padding: 3rem;
+  /* padding: 3rem; */
 }
 .achievement_bullet ul {
   list-style: disc;
   border: 1px solid rgb(218, 218, 218);
-  padding: 2rem 3rem;
+  padding: 3rem !important;
   border-radius: 15px;
 }
 .achievement_main ul li {
