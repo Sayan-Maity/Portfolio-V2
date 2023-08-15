@@ -125,4 +125,5 @@ export interface SectionTitleItem {
   openSource: SectionTitleItemSubItem;
   volunteering: SectionTitleItemSubItem;
   certification: SectionTitleItemSubItem;
+  blog: SectionTitleItemSubItem;
 }
