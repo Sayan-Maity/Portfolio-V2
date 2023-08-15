@@ -37,6 +37,10 @@ const sectionTitleItems: SectionTitleItem = {
         mainTitle: "Certification",
         summary: "Showoff Time ;)"
     },
+    blog: {
+        mainTitle: "Blogs",
+        summary: "Trying to be a little poetic 😋"
+    },
 }
 
 export default sectionTitleItems
