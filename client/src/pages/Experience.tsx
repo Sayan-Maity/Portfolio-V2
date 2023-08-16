@@ -51,7 +51,7 @@ const Experience = () => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getCertification`)
       .then((res) => {
-        setIsLoadingCertificateData(false);
+        // setIsLoadingCertificateData(false);
         setCertificateData(res.data);
         // console.log("inner =>", res.data)
       })
