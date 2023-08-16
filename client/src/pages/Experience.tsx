@@ -103,11 +103,7 @@ const Experience = () => {
         />
         <div className="workExperience">
           {isLoadingExperienceData && (
-            <>
-              <LoadingSkeleton h1Count={1} pCount={3} circleCount={0} />
-              <LoadingSkeleton h1Count={1} pCount={3} circleCount={0} />
-              <LoadingSkeleton h1Count={1} pCount={3} circleCount={0} />
-            </>
+            <LoadingSkeleton h1Count={1} pCount={3} circleCount={0} />
           )}
           {!isLoadingExperienceData &&
             experienceData
@@ -350,10 +346,7 @@ const Experience = () => {
         />
         <div className="workExperience">
           {isLoadingVolunteerData && (
-            <>
-              <LoadingSkeleton h1Count={1} pCount={3} circleCount={0} />
-              <LoadingSkeleton h1Count={1} pCount={3} circleCount={0} />
-            </>
+            <LoadingSkeleton h1Count={1} pCount={3} circleCount={0} />
           )}
           {!isLoadingVolunteerData &&
             volunteerData
