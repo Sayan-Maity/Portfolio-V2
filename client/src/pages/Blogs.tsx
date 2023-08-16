@@ -72,7 +72,7 @@ const Contact = () => {
           summary={sectionTitleItems?.blog?.summary}
         />
         <div className="blog_outerDiv">
-          {isLoadingMediumBlog && mediumBlogInfo?.items?.lenght > 0 && (
+          {isLoadingMediumBlog && mediumBlogInfo?.items?.length > 0 && (
             <LoadingSkeleton h1Count={1} pCount={3} circleCount={1} />
           )}
           {!isLoadingMediumBlog &&
