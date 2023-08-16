@@ -107,7 +107,7 @@ const LandingPage = () => {
         {/* --------------  Landing Section  ------------ */}
         <div className="landing-div">
           <div
-            style={{ display: "flex", flexDirection: "row", width: "1080px" }}
+            style={{ display: "flex", flexDirection: "row", width: "1080px", padding: "2rem" }}
           >
             <div
               style={{ display: "flex", flexDirection: "column", width: "50%" }}
