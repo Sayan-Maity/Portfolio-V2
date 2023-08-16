@@ -49,7 +49,8 @@ const Contact = () => {
         },
       })
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
+        setIsLoadingDevBlog(false)
         setDevToBlogInfo(res.data);
       })
       .catch((err) => {
