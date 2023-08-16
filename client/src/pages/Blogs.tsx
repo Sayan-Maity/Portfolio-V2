@@ -25,7 +25,7 @@ const Contact = () => {
   const [isLoadingDevBlog, setIsLoadingDevBlog] = useState<boolean>(true);
 
   useEffect(() => {
-    // setTimeout(() => {
+    setTimeout(() => {
     axios
       .get(
         "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@Sayancr777"
@@ -38,7 +38,7 @@ const Contact = () => {
       .catch((err) => {
         console.log(err);
       });
-    // }, 5000);
+    }, 5000);
   }, []);
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const Contact = () => {
           summary={sectionTitleItems?.blog?.summary}
         />
         <div className="blog_outerDiv">
-          {isLoadingMediumBlog && mediumBlogInfo?.items?.length > 0 && (
+          {isLoadingMediumBlog && (
             <LoadingSkeleton h1Count={1} pCount={3} circleCount={1} />
           )}
           {!isLoadingMediumBlog &&
