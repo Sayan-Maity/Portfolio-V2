@@ -24,6 +24,7 @@ import FooterGap from "../components/FooterGap";
 import SEO from "../components/SEO";
 import ReadMore from "../components/ReadMore";
 import sectionTitleItems from "../constants/SectionTitleItems";
+import LoadingSkeleton from "../components/LoadingSkeleton";
 
 const LandingPage = () => {
   const [educationData, setEducationData] = useState<EducationItem[]>([]);
@@ -31,18 +32,24 @@ const LandingPage = () => {
   const [projectLoopData, setProjectLoopData] = useState<any[]>([]);
   const [originalLoopData, setOriginalLoopData] = useState<any[]>([]);
   const [socialLinkData, setSocialLinkData] = useState<SocialLinkItem[]>([]);
+  const [isLoadingEducationData, setIsLoadingEducationData] = useState<boolean>(true);
+  const [isLoadingAchievementData, setIsLoadingAchievementData] = useState<boolean>(true);
+
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_SERVER_URL}/getEducation`)
-      .then((res) => {
-        setEducationData(res.data);
-        // console.log("inner =>", res.data)
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    setTimeout(() => {
+      axios
+        .get(`${import.meta.env.VITE_SERVER_URL}/getEducation`)
+        .then((res) => {
+          setIsLoadingEducationData(false);
+          setEducationData(res.data);
+          // console.log("inner =>", res.data)
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }, 5000);
   }, []);
 
   useEffect(() => {
@@ -63,6 +70,7 @@ const LandingPage = () => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getAchievement`)
       .then((res) => {
+        setIsLoadingAchievementData(false);
         setAchievementData(res.data);
         // console.log("inner =>", res.data)
       })
@@ -108,7 +116,8 @@ const LandingPage = () => {
               <h1 className="title">Sayan</h1>
               <p className="third-title">
                 {" "}
-                ... from sketches to code, bringing designs to life with passion !
+                ... from sketches to code, bringing designs to life with passion
+                !
               </p>
             </div>
           </div>
@@ -146,6 +155,7 @@ const LandingPage = () => {
                 />
               </div>
             </Atropos> */}
+
             <div className="profile-image">
               <img
                 src="https://ik.imagekit.io/sayancr777/tr:w-400/Portfolio/sayan.jpg?updatedAt=1691154907703"
@@ -230,103 +240,111 @@ const LandingPage = () => {
             alignItems: "center",
           }}
         >
+          {isLoadingEducationData && (
+            <LoadingSkeleton h1Count={1} pCount={3} circleCount={1} />
+          )}
+
           <div className="education_main">
             <div className="education_outer">
-              {educationData
-                .slice()
-                .reverse()
-                .map((education, index) => (
-                  <div
-                    key={index}
-                    className="education_inner"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <div className="name-date">
-                      <p>
-                        {education.websiteLink.length > 0 ? (
-                          <Link
-                            to={education.websiteLink}
-                            style={{ fontSize: "2rem" }}
-                            target="_blank"
-                          >
-                            <b>{education.name}</b>
-                          </Link>
-                        ) : (
-                          <p>{education.name}</p>
-                        )}
-                      </p>
-                      <p>
-                        {education.startDate} - {education.endDate}
-                      </p>
-                    </div>
-
-                    <p className="degree-grade">
-                      <p>
-                        {education.degree}{" "}
-                        {education.major.length > 1 ? (
-                          <>
-                            <BsDot /> {education?.major}
-                          </>
-                        ) : (
-                          ""
-                        )}
-                      </p>
-                      <p> Grade - {education.grade}</p>
-                    </p>
-                    <ul
-                      style={{ fontSize: "1rem" }}
-                      className="education-details"
+              {!isLoadingEducationData &&
+                educationData
+                  .slice()
+                  .reverse()
+                  .map((education, index) => (
+                    <div
+                      key={index}
+                      className="education_inner"
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
                     >
-                      {education.educationDetails.map((item) => (
-                        <li>
-                          <p>{item}</p>
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="skill-activities">
-                      <div className="skills">
-                        {education.skills.length > 0 ? (
-                          <p>
-                            {" "}
-                            <span className="skill-span">Skills </span>
-                            <span className="skillItem-span">
-                              {education.skills.map((skillItem, index) => (
-                                <span key={index}>{skillItem}</span>
-                              ))}
-                            </span>
-                          </p>
-                        ) : (
-                          ""
-                        )}
+                      <div className="name-date">
+                        <p>
+                          {education.websiteLink.length > 0 ? (
+                            <Link
+                              to={education.websiteLink}
+                              style={{ fontSize: "2rem" }}
+                              target="_blank"
+                            >
+                              <b>{education.name}</b>
+                            </Link>
+                          ) : (
+                            <p>{education.name}</p>
+                          )}
+                        </p>
+                        <p>
+                          {education.startDate} - {education.endDate}
+                        </p>
                       </div>
-                      <div className="activities">
-                        {education.activities.length > 0 ? (
-                          <p>
-                            <span className="skill-span">Activities</span>
-                            <span className="skillItem-span">
-                              {education.activities.map(
-                                (activityItem, index) => (
-                                  <span key={index}>{activityItem}</span>
-                                )
-                              )}
-                            </span>
-                          </p>
-                        ) : (
-                          ""
-                        )}
+
+                      <p className="degree-grade">
+                        <p>
+                          {education.degree}{" "}
+                          {education.major.length > 1 ? (
+                            <>
+                              <BsDot /> {education?.major}
+                            </>
+                          ) : (
+                            ""
+                          )}
+                        </p>
+                        <p> Grade - {education.grade}</p>
+                      </p>
+                      <ul
+                        style={{ fontSize: "1rem" }}
+                        className="education-details"
+                      >
+                        {education.educationDetails.map((item) => (
+                          <li>
+                            <p>{item}</p>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="skill-activities">
+                        <div className="skills">
+                          {education.skills.length > 0 ? (
+                            <p>
+                              {" "}
+                              <span className="skill-span">Skills </span>
+                              <span className="skillItem-span">
+                                {education.skills.map((skillItem, index) => (
+                                  <span key={index}>{skillItem}</span>
+                                ))}
+                              </span>
+                            </p>
+                          ) : (
+                            ""
+                          )}
+                        </div>
+                        <div className="activities">
+                          {education.activities.length > 0 ? (
+                            <p>
+                              <span className="skill-span">Activities</span>
+                              <span className="skillItem-span">
+                                {education.activities.map(
+                                  (activityItem, index) => (
+                                    <span key={index}>{activityItem}</span>
+                                  )
+                                )}
+                              </span>
+                            </p>
+                          ) : (
+                            ""
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
             </div>
           </div>
         </section>
 
         {/* --------------  Achievements  ------------ */}
-        <SectionTitle mainTitle={sectionTitleItems?.achievements?.mainTitle} summary={sectionTitleItems?.achievements?.summary} />
+        <SectionTitle
+          mainTitle={sectionTitleItems?.achievements?.mainTitle}
+          summary={sectionTitleItems?.achievements?.summary}
+        />
         <section
           className="achievements"
           style={{
@@ -336,10 +354,13 @@ const LandingPage = () => {
             alignItems: "center",
           }}
         >
+          {isLoadingAchievementData && (
+            <LoadingSkeleton h1Count={1} pCount={3} circleCount={1} />
+          )}
           <div className="achievement_main">
             <div className="achievement_bullet">
               <ul>
-                {achievementData
+                {!isLoadingAchievementData && achievementData
                   .slice()
                   .reverse()
                   .map((achievement, index) => (
@@ -360,7 +381,10 @@ const LandingPage = () => {
         </section>
 
         {/* --------------  Projects  ------------ */}
-        <SectionTitle mainTitle={sectionTitleItems?.projects?.mainTitle} summary={sectionTitleItems?.projects?.summary} />
+        <SectionTitle
+          mainTitle={sectionTitleItems?.projects?.mainTitle}
+          summary={sectionTitleItems?.projects?.summary}
+        />
         <section
           style={{
             display: "flex",
