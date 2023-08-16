@@ -28,8 +28,7 @@ const Experience = () => {
   const [openSourceData, setOpenSourceData] = useState<OpenSourceItem[]>([]);
   const [isLoadingExperienceData, setIsLoadingExperienceData] =
     useState<boolean>(true);
-  const [isLoadingCertificateData, setIsLoadingCertificateData] =
-    useState<boolean>(true);
+  // const [isLoadingCertificateData, setIsLoadingCertificateData] = useState<boolean>(true);
   const [isLoadingVolunteerData, setIsLoadingVolunteerData] =
     useState<boolean>(true);
   const [isLoadingOpenSourceData, setIsLoadingOpenSourceData] =
