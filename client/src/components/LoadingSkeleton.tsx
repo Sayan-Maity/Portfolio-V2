@@ -10,7 +10,7 @@ const LoadingSkeleton = ({
 }: ILoadingSkeletopnProps) => {
   return (
     <div className="skeleton-style">
-      <div style={{width: "4rem", height: "4rem"}} >
+      <div>
         <Skeleton
           circle={true}
           count={circleCount}
