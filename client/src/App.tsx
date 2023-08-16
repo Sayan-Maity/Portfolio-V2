@@ -5,6 +5,7 @@ import SEO from "./components/SEO";
 import { hotjar } from "react-hotjar";
 import { useEffect } from "react";
 import CustomRoutes from "./components/CustomRoutes";
+import { SkeletonTheme } from "react-loading-skeleton";
 
 function App() {
   // HotJar Integration :
@@ -18,10 +19,12 @@ function App() {
   return (
     <>
       <Toaster />
+      <SkeletonTheme baseColor="#dddddd" highlightColor="#ebebeb">
       <Router>
         <SEO dynamicTitle="Sayan | Home" />
         <CustomRoutes />
       </Router>
+      </SkeletonTheme>
     </>
   );
 }
