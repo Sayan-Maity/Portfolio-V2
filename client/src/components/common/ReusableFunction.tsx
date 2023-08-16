@@ -18,9 +18,6 @@ export function formatTimestamp(timestamp: string) {
   const day = date.getDate();
   const month = months[date.getMonth()];
 
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-
   const formattedDate = `${month} ${day}`;
   return formattedDate;
 }
