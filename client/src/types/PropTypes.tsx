@@ -19,3 +19,9 @@ export interface IReadMoreProps {
     text: string;
     maxCharacters: number;
 }
+
+export interface ILoadingSkeletopnProps {
+    h1Count: number;
+    pCount: number;
+    circleCount: number;
+}
