@@ -12,6 +12,7 @@
   "dependencies": {
     "atropos": "^2.0.2",
     "axios": "^1.4.0",
+    "framer-motion": "^10.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
