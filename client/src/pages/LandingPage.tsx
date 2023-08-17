@@ -25,6 +25,7 @@ import SEO from "../components/SEO";
 import ReadMore from "../components/ReadMore";
 import sectionTitleItems from "../constants/SectionTitleItems";
 import LoadingSkeleton from "../components/LoadingSkeleton";
+import { motion } from "framer-motion";
 
 const LandingPage = () => {
   const [educationData, setEducationData] = useState<EducationItem[]>([]);
@@ -32,8 +33,10 @@ const LandingPage = () => {
   const [projectLoopData, setProjectLoopData] = useState<any[]>([]);
   const [originalLoopData, setOriginalLoopData] = useState<any[]>([]);
   const [socialLinkData, setSocialLinkData] = useState<SocialLinkItem[]>([]);
-  const [isLoadingEducationData, setIsLoadingEducationData] = useState<boolean>(true);
-  const [isLoadingAchievementData, setIsLoadingAchievementData] = useState<boolean>(true);
+  const [isLoadingEducationData, setIsLoadingEducationData] =
+    useState<boolean>(true);
+  const [isLoadingAchievementData, setIsLoadingAchievementData] =
+    useState<boolean>(true);
 
   const navigate = useNavigate();
 
@@ -107,19 +110,43 @@ const LandingPage = () => {
         {/* --------------  Landing Section  ------------ */}
         <div className="landing-div">
           <div
-            style={{ display: "flex", flexDirection: "row", width: "1080px", padding: "2rem" }}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "1080px",
+              padding: "2rem",
+            }}
           >
-            <div
+            <motion.div
               style={{ display: "flex", flexDirection: "column", width: "50%" }}
             >
-              <p className="first-title">Hey, I'm</p>
-              <h1 className="title">Sayan</h1>
-              <p className="third-title">
+              <motion.p
+                initial={{ x: -100 }}
+                animate={{ x: 0 }}
+                transition={{ ease: "easeOut", duration: 0.8 }}
+                className="first-title"
+              >
+                Hey, I'm
+              </motion.p>
+              <motion.h1
+                initial={{ x: -100 }}
+                animate={{ x: 0 }}
+                transition={{ ease: "easeOut", duration: 0.5 }}
+                className="title"
+              >
+                Sayan
+              </motion.h1>
+              <motion.p
+                initial={{ x: -100 }}
+                animate={{ x: 0 }}
+                transition={{ ease: "easeOut", duration: 0.8 }}
+                className="third-title"
+              >
                 {" "}
                 ... from sketches to code, bringing designs to life with passion
                 !
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           </div>
         </div>
 
@@ -360,21 +387,22 @@ const LandingPage = () => {
           <div className="achievement_main">
             <div className="achievement_bullet">
               <ul>
-                {!isLoadingAchievementData && achievementData
-                  .slice()
-                  .reverse()
-                  .map((achievement, index) => (
-                    <li style={{ fontSize: "1.2rem" }} key={index}>
-                      {achievement.detail}{" "}
-                      {achievement.link === "" ? (
-                        ""
-                      ) : (
-                        <Link to={achievement.link} target="_blank">
-                          <b>Certificate</b>
-                        </Link>
-                      )}
-                    </li>
-                  ))}
+                {!isLoadingAchievementData &&
+                  achievementData
+                    .slice()
+                    .reverse()
+                    .map((achievement, index) => (
+                      <li style={{ fontSize: "1.2rem" }} key={index}>
+                        {achievement.detail}{" "}
+                        {achievement.link === "" ? (
+                          ""
+                        ) : (
+                          <Link to={achievement.link} target="_blank">
+                            <b>Certificate</b>
+                          </Link>
+                        )}
+                      </li>
+                    ))}
               </ul>
             </div>
           </div>
