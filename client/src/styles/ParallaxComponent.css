@@ -10,16 +10,17 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  /* background-color: yellow; */
 }
 .innerParallax-div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* padding-left: 10%; */
-    padding-bottom: 10%;
-    /* background-color: red; */
-    width: 1080px;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* padding-left: 10%; */
+  padding-bottom: 10%;
+  width: 1080px;
+  gap: 0.5rem;
+  /* background-color: red; */
 }
 .parallax-title-div {
   display: flex;
@@ -47,4 +48,12 @@
 }
 .breadcrumb a:nth-child(2) {
   color: var(--color-white);
+}
+
+
+@media screen and (max-width: 1080px) {
+  .outerParallax-div {
+    padding-left: 10%;
+    padding-bottom: 20%;
+  }
 }
