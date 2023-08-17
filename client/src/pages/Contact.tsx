@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import FooterGap from "../components/FooterGap";
 import SEO from "../components/SEO";
 import parallaxItems from "../constants/ParallaxItems";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [firstName, setFirstName] = useState("");
@@ -62,7 +63,18 @@ const Contact = () => {
     <div>
       <Navbar />
       <SEO dynamicTitle="Sayan | Contact" />
-      <div style={{ width: "100%", background: "#f4f4f4" }}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+            staggerChildren: 0.2,
+          },
+        }}
+        style={{ width: "100%", background: "#f4f4f4" }}
+      >
         <ParallaxComponent
           title={parallaxItems[2].title}
           wallpaper={parallaxItems[2].wallpaper}
@@ -174,9 +186,9 @@ const Contact = () => {
         </div>
 
         <div className="body"></div>
-      </div>
+      </motion.div>
       <MobileNavbar />
-      <FooterGap/>
+      <FooterGap />
       <Footer />
     </div>
   );

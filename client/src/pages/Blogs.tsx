@@ -17,6 +17,7 @@ import { BsLink45Deg } from "react-icons/bs";
 import SectionTitle from "../components/SectionTitle";
 import sectionTitleItems from "../constants/SectionTitleItems";
 import LoadingSkeleton from "../components/LoadingSkeleton";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [mediumBlogInfo, setMediumBlogInfo] = useState<any>({});
@@ -50,7 +51,7 @@ const Contact = () => {
       })
       .then((res) => {
         // console.log(res.data);
-        setIsLoadingDevBlog(false)
+        setIsLoadingDevBlog(false);
         setDevToBlogInfo(res.data);
       })
       .catch((err) => {
@@ -62,7 +63,18 @@ const Contact = () => {
     <div>
       <Navbar />
       <SEO dynamicTitle="Sayan | Blogs" />
-      <div style={{ width: "100%", background: "#f4f4f4" }}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+            staggerChildren: 0.2,
+          },
+        }}
+        style={{ width: "100%", background: "#f4f4f4" }}
+      >
         <ParallaxComponent
           title={parallaxItems[3].title}
           wallpaper={parallaxItems[3].wallpaper}
@@ -151,7 +163,7 @@ const Contact = () => {
               // </div>
             ))}
         </div>
-      </div>
+      </motion.div>
       <MobileNavbar />
       {/* <FooterGap/> */}
       <Footer />

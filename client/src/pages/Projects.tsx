@@ -13,6 +13,7 @@ import { BsLink45Deg } from "react-icons/bs";
 import "../styles/Projects.css";
 import parallaxItems from "../constants/ParallaxItems";
 import sectionTitleItems from "../constants/SectionTitleItems";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const [projectLoopData, setProjectLoopData] = useState<any[]>([]);
@@ -24,7 +25,7 @@ const Projects = () => {
       .get(`${import.meta.env.VITE_SERVER_URL}/getProjectLoop`)
       .then((res) => {
         setOriginalLoopData(res.data[0].loop);
-        const loopData = res.data[0].loop.slice(0, res.data[0].loop.length );
+        const loopData = res.data[0].loop.slice(0, res.data[0].loop.length);
         setProjectLoopData(loopData);
         // setProjectLoopData(res.data[0].loop);
       })
@@ -46,7 +47,18 @@ const Projects = () => {
     <div>
       <Navbar />
       <SEO dynamicTitle="Sayan | Projects" />
-      <div style={{ width: "100%", background: "#f4f4f4" }}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+            staggerChildren: 0.2,
+          },
+        }}
+        style={{ width: "100%", background: "#f4f4f4" }}
+      >
         <ParallaxComponent
           title={parallaxItems[0].title}
           wallpaper={parallaxItems[0].wallpaper}
@@ -99,12 +111,15 @@ const Projects = () => {
           </div>
 
           <div className="more-projects">
-            <p><b>There's more,</b></p>
-            <Link to="https://github.com/Sayan-Maity" target="_blank"><b>Click here to find out !</b></Link>
+            <p>
+              <b>There's more,</b>
+            </p>
+            <Link to="https://github.com/Sayan-Maity" target="_blank">
+              <b>Click here to find out !</b>
+            </Link>
           </div>
-
         </section>
-      </div>
+      </motion.div>
       <MobileNavbar />
       {/* <FooterGap/> */}
       <Footer />

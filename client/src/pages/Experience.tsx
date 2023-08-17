@@ -20,6 +20,7 @@ import SEO from "../components/SEO";
 import parallaxItems from "../constants/ParallaxItems";
 import sectionTitleItems from "../constants/SectionTitleItems";
 import LoadingSkeleton from "../components/LoadingSkeleton";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   const [experienceData, setExperienceData] = useState<ExperienceItem[]>([]);
@@ -90,7 +91,18 @@ const Experience = () => {
     <div>
       <Navbar />
       <SEO dynamicTitle="Sayan | Experience" />
-      <div style={{ width: "100%", background: "#f4f4f4" }}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+            staggerChildren: 0.2,
+          },
+        }}
+        style={{ width: "100%", background: "#f4f4f4" }}
+      >
         <ParallaxComponent
           title={parallaxItems[1].title}
           wallpaper={parallaxItems[1].wallpaper}
@@ -432,7 +444,7 @@ const Experience = () => {
               </div>
             ))}
         </div>
-      </div>
+      </motion.div>
       <MobileNavbar />
       <FooterGap />
       <Footer />

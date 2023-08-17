@@ -106,7 +106,17 @@ const LandingPage = () => {
     <div>
       <Navbar />
       <SEO dynamicTitle="Sayan | Home" />
-      <div style={{ width: "100%", background: "#f4f4f4" }}>
+      <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+          ease: "easeInOut",
+          staggerChildren: 0.2,
+        },
+      }}
+       style={{ width: "100%", background: "#f4f4f4" }}>
         {/* --------------  Landing Section  ------------ */}
         <div className="landing-div">
           <div
@@ -471,7 +481,7 @@ const LandingPage = () => {
             </Link>
           </div>
         </section>
-      </div>
+      </motion.div>
       <MobileNavbar />
       <FooterGap />
       <Footer />
