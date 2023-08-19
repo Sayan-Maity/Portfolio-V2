@@ -41,18 +41,16 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => {
-      axios
-        .get(`${import.meta.env.VITE_SERVER_URL}/getEducation`)
-        .then((res) => {
-          setIsLoadingEducationData(false);
-          setEducationData(res.data);
-          // console.log("inner =>", res.data)
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }, 5000);
+    axios
+      .get(`${import.meta.env.VITE_SERVER_URL}/getEducation`)
+      .then((res) => {
+        setIsLoadingEducationData(false);
+        setEducationData(res.data);
+        // console.log("inner =>", res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   useEffect(() => {
@@ -107,16 +105,16 @@ const LandingPage = () => {
       <Navbar />
       <SEO dynamicTitle="Sayan | Home" />
       <motion.div
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: {
-          duration: 0.5,
-          ease: "easeInOut",
-          staggerChildren: 0.2,
-        },
-      }}
-       style={{ width: "100%", background: "#f4f4f4" }}>
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+            staggerChildren: 0.2,
+          },
+        }}
+        style={{ width: "100%", background: "#f4f4f4" }}>
         {/* --------------  Landing Section  ------------ */}
         <div className="landing-div">
           <div
