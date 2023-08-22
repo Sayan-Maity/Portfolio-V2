@@ -16,7 +16,6 @@ import { Link } from "react-router-dom";
 import { BsLink45Deg } from "react-icons/bs";
 import SectionTitle from "../components/SectionTitle";
 import sectionTitleItems from "../constants/SectionTitleItems";
-import LoadingSkeleton from "../components/SkeletonLoader/LoadingSkeleton";
 import { motion } from "framer-motion";
 import LoadingSkeletonBlog from "../components/SkeletonLoader/LoadingSkeletonBlog";
 
