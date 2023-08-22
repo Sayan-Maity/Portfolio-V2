@@ -24,7 +24,7 @@ import FooterGap from "../components/FooterGap";
 import SEO from "../components/SEO";
 import ReadMore from "../components/ReadMore";
 import sectionTitleItems from "../constants/SectionTitleItems";
-import LoadingSkeleton from "../components/LoadingSkeleton";
+import LoadingSkeleton from "../components/SkeletonLoader/LoadingSkeleton";
 import { motion } from "framer-motion";
 
 const LandingPage = () => {

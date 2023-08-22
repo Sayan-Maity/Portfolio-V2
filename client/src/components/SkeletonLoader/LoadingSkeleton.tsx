@@ -1,7 +1,7 @@
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import { ILoadingSkeletopnProps } from "../types/PropTypes";
-import "../styles/LoadingSkeleton.css";
+import { ILoadingSkeletopnProps } from "../../types/PropTypes";
+import "../../styles/LoadingSkeleton.css";
 
 const LoadingSkeleton = ({
   h1Count,

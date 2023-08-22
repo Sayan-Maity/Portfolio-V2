@@ -19,7 +19,7 @@ import FooterGap from "../components/FooterGap";
 import SEO from "../components/SEO";
 import parallaxItems from "../constants/ParallaxItems";
 import sectionTitleItems from "../constants/SectionTitleItems";
-import LoadingSkeleton from "../components/LoadingSkeleton";
+import LoadingSkeleton from "../components/SkeletonLoader/LoadingSkeleton";
 import { motion } from "framer-motion";
 
 const Experience = () => {
