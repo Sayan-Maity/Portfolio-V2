@@ -27,6 +27,7 @@ import sectionTitleItems from "../constants/SectionTitleItems";
 import LoadingSkeleton from "../components/SkeletonLoader/LoadingSkeleton";
 import LoadingSkeletonProject from "../components/SkeletonLoader/LoadingSkeletonProject";
 import { motion } from "framer-motion";
+import LoadingSkeletonEducation from "../components/SkeletonLoader/LoadingSkeletonEducation";
 
 const LandingPage = () => {
   const [educationData, setEducationData] = useState<EducationItem[]>([]);
@@ -280,7 +281,7 @@ const LandingPage = () => {
           }}
         >
           {isLoadingEducationData && (
-            <LoadingSkeleton h1Count={1} pCount={3} circleCount={1} />
+            <LoadingSkeletonEducation />
           )}
 
           <div className="education_main">
