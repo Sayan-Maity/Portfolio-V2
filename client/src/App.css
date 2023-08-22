@@ -71,3 +71,17 @@ body {
   background: linear-gradient(to bottom, var(--color-dark), var(--color-light));
 }
 
+
+a::selection,
+li::selection,
+ul::selection,
+span::selection,
+p::selection,
+h6::selection,
+h5::selection,
+h4::selection,
+h3::selection,
+h2::selection,
+h1::selection {
+  background-color: var(--color-hightlighter);
+}
