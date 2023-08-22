@@ -19,7 +19,6 @@ import FooterGap from "../components/FooterGap";
 import SEO from "../components/SEO";
 import parallaxItems from "../constants/ParallaxItems";
 import sectionTitleItems from "../constants/SectionTitleItems";
-import LoadingSkeleton from "../components/SkeletonLoader/LoadingSkeleton";
 import { motion } from "framer-motion";
 import LoadingSkeletonEducation from "../components/SkeletonLoader/LoadingSkeletonEducation";
 import LoadingSkeletonVolunteer from "../components/SkeletonLoader/LoadingSkeletonVolunteer";
