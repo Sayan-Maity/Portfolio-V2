@@ -26,7 +26,7 @@ const Projects = () => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getProjectLoop`)
       .then((res) => {
-        setIsLoadingProjectData(true);
+        setIsLoadingProjectData(false);
         setOriginalLoopData(res.data[0].loop);
         const loopData = res.data[0].loop.slice(0, res.data[0].loop.length);
         setProjectLoopData(loopData);
