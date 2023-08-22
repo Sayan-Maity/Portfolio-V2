@@ -21,6 +21,7 @@ import parallaxItems from "../constants/ParallaxItems";
 import sectionTitleItems from "../constants/SectionTitleItems";
 import LoadingSkeleton from "../components/SkeletonLoader/LoadingSkeleton";
 import { motion } from "framer-motion";
+import LoadingSkeletonEducation from "../components/SkeletonLoader/LoadingSkeletonEducation";
 
 const Experience = () => {
   const [experienceData, setExperienceData] = useState<ExperienceItem[]>([]);
@@ -115,7 +116,7 @@ const Experience = () => {
         />
         <div className="workExperience">
           {isLoadingExperienceData && (
-            <LoadingSkeleton h1Count={1} pCount={3} circleCount={0} />
+            <LoadingSkeletonEducation />
           )}
           {!isLoadingExperienceData &&
             experienceData
