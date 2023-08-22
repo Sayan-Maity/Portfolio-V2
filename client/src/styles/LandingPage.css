@@ -315,6 +315,11 @@
     padding: 0;
   }
 }
+@media screen and (max-width: 450px) {
+  .education_inner {
+    padding: 2rem;
+  }
+}
 
 
 
@@ -508,3 +513,16 @@
 
 
 /*  ------------------------------  PROJECTS  --------------------------  */
+
+
+
+
+/*  ------------------------------  COMMON  --------------------------  */
+@media screen and (max-width: 450px) {
+  .achievement_bullet ul,
+  .education_inner {
+    padding: 2rem !important;
+  }
+}
+
+/*  ------------------------------  COMMON  --------------------------  */
