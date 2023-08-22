@@ -25,6 +25,7 @@ import SEO from "../components/SEO";
 import ReadMore from "../components/ReadMore";
 import sectionTitleItems from "../constants/SectionTitleItems";
 import LoadingSkeleton from "../components/SkeletonLoader/LoadingSkeleton";
+import LoadingSkeletonProject from "../components/SkeletonLoader/LoadingSkeletonProject";
 import { motion } from "framer-motion";
 
 const LandingPage = () => {
@@ -36,6 +37,8 @@ const LandingPage = () => {
   const [isLoadingEducationData, setIsLoadingEducationData] =
     useState<boolean>(true);
   const [isLoadingAchievementData, setIsLoadingAchievementData] =
+    useState<boolean>(true);
+  const [isLoadingProjectData, setIsLoadingProjectData] =
     useState<boolean>(true);
 
   const navigate = useNavigate();
@@ -57,6 +60,7 @@ const LandingPage = () => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getProjectLoop`)
       .then((res) => {
+        setIsLoadingProjectData(false)
         setOriginalLoopData(res.data[0].loop);
         const loopData = res.data[0].loop.slice(0, 3);
         setProjectLoopData(loopData);
@@ -430,9 +434,12 @@ const LandingPage = () => {
             alignItems: "center",
           }}
         >
+          {isLoadingProjectData && (
+            <LoadingSkeletonProject />
+          )}
           <div className="project_main">
             <div className="project_outer">
-              {projectLoopData.map((projectLoop, index) => (
+              {!isLoadingProjectData && projectLoopData.map((projectLoop, index) => (
                 <div key={index} className="project_inner">
                   <div className="left">
                     <Link

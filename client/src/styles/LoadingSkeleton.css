@@ -1,8 +1,9 @@
+/* ------------------------  General  -------------------------- */
 .skeleton-style {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
   width: 1080px;
   border: 1px solid var(--border-color-regular);
   padding: 3rem;
@@ -13,5 +14,28 @@
 @media screen and (max-width: 1080px) {
   .skeleton-style {
     width: 90%;
+  }
+}
+
+/* ------------------------  Project  -------------------------- */
+.skeleton-style-project {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 1080px;
+  border: 1px solid var(--border-color-regular);
+  padding: 3rem;
+  border-radius: 20px;
+  background-color: #fff;
+}
+@media screen and (max-width: 1080px) {
+  .skeleton-style-project {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .skeleton-style-project {
+    flex-direction: column;
   }
 }

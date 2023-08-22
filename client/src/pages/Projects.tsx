@@ -14,16 +14,19 @@ import "../styles/Projects.css";
 import parallaxItems from "../constants/ParallaxItems";
 import sectionTitleItems from "../constants/SectionTitleItems";
 import { motion } from "framer-motion";
+import LoadingSkeletonProject from "../components/SkeletonLoader/LoadingSkeletonProject";
 
 const Projects = () => {
   const [projectLoopData, setProjectLoopData] = useState<any[]>([]);
   const [originalLoopData, setOriginalLoopData] = useState<any[]>([]);
+  const [isLoadingProjectData, setIsLoadingProjectData] = useState<boolean>(true);
   const navigate = useNavigate();
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getProjectLoop`)
       .then((res) => {
+        setIsLoadingProjectData(true);
         setOriginalLoopData(res.data[0].loop);
         const loopData = res.data[0].loop.slice(0, res.data[0].loop.length);
         setProjectLoopData(loopData);
@@ -68,9 +71,12 @@ const Projects = () => {
           summary={sectionTitleItems?.projects?.summary}
         />
         <section className="projects-page">
+          {isLoadingProjectData && (
+            <LoadingSkeletonProject />
+          )}
           <div className="project_main">
             <div className="project_outer">
-              {projectLoopData.map((projectLoop, index) => (
+              {!isLoadingProjectData && projectLoopData.map((projectLoop, index) => (
                 <div key={index} className="project_inner">
                   <div className="left">
                     <Link
