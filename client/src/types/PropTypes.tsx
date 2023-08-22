@@ -25,3 +25,7 @@ export interface ILoadingSkeletopnProps {
     pCount: number;
     circleCount: number;
 }
+
+export interface ILoadingSkeletonVolunteerProps {
+    countTag: number;
+}

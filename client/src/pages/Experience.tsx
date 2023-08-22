@@ -22,6 +22,7 @@ import sectionTitleItems from "../constants/SectionTitleItems";
 import LoadingSkeleton from "../components/SkeletonLoader/LoadingSkeleton";
 import { motion } from "framer-motion";
 import LoadingSkeletonEducation from "../components/SkeletonLoader/LoadingSkeletonEducation";
+import LoadingSkeletonVolunteer from "../components/SkeletonLoader/LoadingSkeletonVolunteer";
 
 const Experience = () => {
   const [experienceData, setExperienceData] = useState<ExperienceItem[]>([]);
@@ -66,7 +67,7 @@ const Experience = () => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getVolunteer`)
       .then((res) => {
-        setIsLoadingVolunteerData(false);
+        setIsLoadingVolunteerData(true);
         setVolunteerData(res.data);
         // console.log("inner =>", res.data)
       })
@@ -79,7 +80,7 @@ const Experience = () => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getOpenSource`)
       .then((res) => {
-        setIsLoadingOpenSourceData(false);
+        setIsLoadingOpenSourceData(true);
         setOpenSourceData(res.data);
         // console.log("inner =>", res.data)
       })
@@ -180,7 +181,7 @@ const Experience = () => {
         />
         <div className="workExperience workExperience-openSource">
           {isLoadingOpenSourceData && (
-            <LoadingSkeleton h1Count={1} pCount={3} circleCount={0} />
+            <LoadingSkeletonVolunteer countTag={2} />
           )}
           {!isLoadingOpenSourceData &&
             openSourceData
@@ -359,7 +360,7 @@ const Experience = () => {
         />
         <div className="workExperience">
           {isLoadingVolunteerData && (
-            <LoadingSkeleton h1Count={1} pCount={3} circleCount={0} />
+            <LoadingSkeletonVolunteer countTag={1} />
           )}
           {!isLoadingVolunteerData &&
             volunteerData
