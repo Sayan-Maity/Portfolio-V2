@@ -18,6 +18,7 @@
 }
 
 /* ------------------------  Project  -------------------------- */
+.skeleton-style-blog ,
 .skeleton-style-project {
   display: flex;
   flex-direction: row;
@@ -38,4 +39,25 @@
   .skeleton-style-project {
     flex-direction: column;
   }
+}
+
+/* ------------------------  Project  -------------------------- */
+@media screen and (max-width: 1080px) {
+  .skeleton-style-blog {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .skeleton-style-blog {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .skeleton-style-blog .left {
+    display: none;
+  }
+  .skeleton-style-blog .right {
+    width: 100% !important;
+  }
+
 }

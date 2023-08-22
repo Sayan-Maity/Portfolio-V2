@@ -18,6 +18,7 @@ import SectionTitle from "../components/SectionTitle";
 import sectionTitleItems from "../constants/SectionTitleItems";
 import LoadingSkeleton from "../components/SkeletonLoader/LoadingSkeleton";
 import { motion } from "framer-motion";
+import LoadingSkeletonBlog from "../components/SkeletonLoader/LoadingSkeletonBlog";
 
 const Contact = () => {
   const [mediumBlogInfo, setMediumBlogInfo] = useState<any>({});
@@ -33,7 +34,7 @@ const Contact = () => {
       )
       .then((res) => {
         // console.log(res.data);
-        setIsLoadingMediumBlog(false);
+        setIsLoadingMediumBlog(true);
         setMediumBlogInfo(res.data);
       })
       .catch((err) => {
@@ -85,7 +86,7 @@ const Contact = () => {
         />
         <div className="blog_outerDiv">
           {isLoadingMediumBlog && (
-            <LoadingSkeleton h1Count={1} pCount={3} circleCount={1} />
+            <LoadingSkeletonBlog />
           )}
           {!isLoadingMediumBlog &&
             mediumBlogInfo?.items?.map((item: any, index: number) => (
@@ -120,7 +121,7 @@ const Contact = () => {
             ))}
 
           {isLoadingDevBlog && devToBlogInfo?.result?.length > 0 && (
-            <LoadingSkeleton h1Count={1} pCount={3} circleCount={1} />
+            <LoadingSkeletonBlog />
           )}
           {!isLoadingDevBlog &&
             devToBlogInfo?.result?.map((item: any, index: number) => (
