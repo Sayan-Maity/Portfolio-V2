@@ -33,7 +33,7 @@ const Contact = () => {
       )
       .then((res) => {
         // console.log(res.data);
-        setIsLoadingMediumBlog(true);
+        setIsLoadingMediumBlog(false);
         setMediumBlogInfo(res.data);
       })
       .catch((err) => {
