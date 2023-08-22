@@ -66,7 +66,7 @@ const Experience = () => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getVolunteer`)
       .then((res) => {
-        setIsLoadingVolunteerData(true);
+        setIsLoadingVolunteerData(false);
         setVolunteerData(res.data);
         // console.log("inner =>", res.data)
       })
@@ -79,7 +79,7 @@ const Experience = () => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getOpenSource`)
       .then((res) => {
-        setIsLoadingOpenSourceData(true);
+        setIsLoadingOpenSourceData(false);
         setOpenSourceData(res.data);
         // console.log("inner =>", res.data)
       })
