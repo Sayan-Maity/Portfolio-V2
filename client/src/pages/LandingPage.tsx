@@ -392,28 +392,29 @@ const LandingPage = () => {
           {isLoadingAchievementData && (
             <LoadingSkeleton h1Count={1} pCount={3} circleCount={1} />
           )}
-          <div className="achievement_main">
-            <div className="achievement_bullet">
-              <ul>
-                {!isLoadingAchievementData &&
-                  achievementData
-                    .slice()
-                    .reverse()
-                    .map((achievement, index) => (
-                      <li style={{ fontSize: "1.2rem" }} key={index}>
-                        {achievement.detail}{" "}
-                        {achievement.link === "" ? (
-                          ""
-                        ) : (
-                          <Link to={achievement.link} target="_blank">
-                            <b>Certificate</b>
-                          </Link>
-                        )}
-                      </li>
-                    ))}
-              </ul>
-            </div>
-          </div>
+          {!isLoadingAchievementData && (
+            <div className="achievement_main">
+              <div className="achievement_bullet">
+                <ul>
+                  {
+                    achievementData
+                      .slice()
+                      .reverse()
+                      .map((achievement, index) => (
+                        <li style={{ fontSize: "1.2rem" }} key={index}>
+                          {achievement.detail}{" "}
+                          {achievement.link === "" ? (
+                            ""
+                          ) : (
+                            <Link to={achievement.link} target="_blank">
+                              <b>Certificate</b>
+                            </Link>
+                          )}
+                        </li>
+                      ))}
+                </ul>
+              </div>
+            </div>)}
         </section>
 
         {/* --------------  Projects  ------------ */}
