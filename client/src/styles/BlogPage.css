@@ -42,6 +42,9 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.blog_innerDiv .blog-right .blog-title-source {
+  gap: 2rem;
+}
 .blog_innerDiv .blog-right .blog-title-source a {
   font-size: var(--font-size-large);
   text-decoration: none;
