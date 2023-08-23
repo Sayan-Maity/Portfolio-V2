@@ -27,11 +27,11 @@ const sectionTitleItems: SectionTitleItem = {
     },
     openSource: {
         mainTitle: "Open Source",
-        summary: "From lines of code to a tapestry of functionality, I've woven contributions that stand as a testament to the spirit of community-driven progress"
+        summary: "From lines of code 👨‍💻 to a tapestry of functionality, I've woven contributions 🤝 that stand as a testament to the spirit of community-driven 👫 progress"
     },
     volunteering: {
         mainTitle: "Volunteering",
-        summary: "In the realm of selflessness, I've worn the cape of a volunteer, driven not by obligation but by the silent whispers of empathy"
+        summary: "In the realm of selflessness 😃, I've worn the cape of a volunteer 👫, driven not by obligation but by the silent whispers of empathy 🤝"
     },
     certification: {
         mainTitle: "Certification",
