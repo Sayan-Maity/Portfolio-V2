@@ -7,11 +7,11 @@ const sectionTitleItems: SectionTitleItem = {
     },
     education: {
         mainTitle: "Education",
-        summary: "Childhood Memories ."
+        summary: "A symphony of learning notes that composed the melody of my growth – each chapter an instrument, each lesson a harmony, crafting the soundtrack of my educational journey."
     },
     achievements: {
         mainTitle: "Achievements",
-        summary: "Showoff Time ;)"
+        summary: "If life's a game, these are my high score moments that reminds me of the incredible things that can be accomplished with passion and determination"
     },
     projects: {
         mainTitle: "Projects",
@@ -23,23 +23,23 @@ const sectionTitleItems: SectionTitleItem = {
     },
     internships: {
         mainTitle: "Internships",
-        summary: "Showoff Time ;)"
+        summary: "Stepping into the real-world arena, these internships weren't just coffee runs and photocopies – they were immersive dives into professional waters, where I swam alongside experts, absorbed real-world skills, and contributed my own ripples of innovation"
     },
     openSource: {
         mainTitle: "Open Source",
-        summary: "Showoff Time ;)"
+        summary: "From lines of code to a tapestry of functionality, I've woven contributions that stand as a testament to the spirit of community-driven progress"
     },
     volunteering: {
         mainTitle: "Volunteering",
-        summary: "Showoff Time ;)"
+        summary: "In the realm of selflessness, I've worn the cape of a volunteer, driven not by obligation but by the silent whispers of empathy"
     },
     certification: {
         mainTitle: "Certification",
-        summary: "Showoff Time ;)"
+        summary: "These aren't just documents; these are the milestones I've crossed in the landscape of continuous self-improvement"
     },
     blog: {
         mainTitle: "Blogs",
-        summary: "Trying to be a little poetic 😋"
+        summary: "Here's where my thoughts take flight, dancing on the pages with words as their partner 😋"
     },
 }
 
