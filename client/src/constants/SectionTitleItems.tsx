@@ -15,7 +15,7 @@ const sectionTitleItems: SectionTitleItem = {
     },
     projects: {
         mainTitle: "Projects",
-        summary: "Take a look at these projects I made in the name of Software Development. Honestly I am quite proud how most of them turned out. Most of them are available on Github so go ahead knock yourself out! The others are client/freelance projects."
+        summary: "Take a look at these projects 🚀 I made in the name of Software Development 💻. Honestly I am quite proud how most of them turned out. Most of them are available on Github so go ahead knock 👊 yourself out! The others are client/freelance projects 🌏."
     },
     nextProject: {
         mainTitle: "Next Project",
