@@ -11,7 +11,7 @@ const sectionTitleItems: SectionTitleItem = {
     },
     achievements: {
         mainTitle: "Achievements",
-        summary: "If life's a game, these are my high score moments that reminds me of the incredible things that can be accomplished with passion and determination"
+        summary: "If life's a game, these are my high score ✍️ moments that reminds me of the incredible things that can be accomplished with passion and determination 👌"
     },
     projects: {
         mainTitle: "Projects",
