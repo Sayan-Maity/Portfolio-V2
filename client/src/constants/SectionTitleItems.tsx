@@ -7,7 +7,7 @@ const sectionTitleItems: SectionTitleItem = {
     },
     education: {
         mainTitle: "Education",
-        summary: "A symphony of learning notes that composed the melody of my growth – each chapter an instrument, each lesson a harmony, crafting the soundtrack of my educational journey."
+        summary: "A symphony of learning notes 🎶 that composed the melody of my growth 📈 – each chapter an instrument, each lesson a harmony, crafting the soundtrack of my educational 🎓 journey."
     },
     achievements: {
         mainTitle: "Achievements",
