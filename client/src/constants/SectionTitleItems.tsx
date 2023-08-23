@@ -19,11 +19,11 @@ const sectionTitleItems: SectionTitleItem = {
     },
     nextProject: {
         mainTitle: "Next Project",
-        summary: "This is not the only project I made, check out this other project that this page randomly chose for you to see, hope you'll like it. And if you don't go back to the projects page to see all the projects I have built so far."
+        summary: "This is not the only project I made 😇, check out this other project 🚀 that this page randomly chose for you to see, hope you'll like it 👍. And if you don't go back to the projects page to see all the projects I have built so far."
     },
     internships: {
         mainTitle: "Internships",
-        summary: "Stepping into the real-world arena, these internships weren't just coffee runs and photocopies – they were immersive dives into professional waters, where I swam alongside experts, absorbed real-world skills, and contributed my own ripples of innovation"
+        summary: "Stepping into the real-world 🌍 arena, these internships weren't just coffee runs and photocopies – they were immersive dives into professional waters 🌊, where I swam alongside experts, absorbed real-world skills, and contributed my own ripples 💦 of innovation"
     },
     openSource: {
         mainTitle: "Open Source",
