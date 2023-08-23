@@ -15,39 +15,39 @@ const SEO = ({ dynamicTitle }: ISeoProps) => {
         content="Women, Career, Tech, AI-Assistance, Passwordless Authentication, One-2-One mentorship, Job Listings"
       />
       {/* Open Graph (Facebook) : */}
-      <meta property="og:title" content="SheRise" />
+      <meta property="og:title" content="Sayan Maity" />
       <meta
         property="og:description"
-        content="One Stop platform for women to excel their career in tech"
+        content="Sayn Maity's Portfolio Website"
       />
       <meta
         property="og:image"
-        content="https://ik.imagekit.io/sayancr777/tr:w-400/SheRise/Banner.jpg?updatedAt=1689688547059"
+        content="https://ik.imagekit.io/sayancr777/tr:w-400/Portfolio/portfolio_Banner.jpg?updatedAt=1692765968938"
       />
-      <meta property="og:url" content="https://sherise.vercel.app/" />
+      <meta property="og:url" content="https://sayan-maity.vercel.app/" />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="SheRise" />
+      <meta property="og:site_name" content="Sayan Maity" />
       <meta property="og:locale" content="en_US" />
 
       {/* Twitter : */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://sherise.vercel.app/" />
-      <meta property="twitter:title" content="SheRise" />
+      <meta property="twitter:url" content="https://sayan-maity.vercel.app/" />
+      <meta property="twitter:title" content="Sayan Maity" />
       <meta
         property="twitter:description"
-        content="One Stop platform for women to excel their career in tech"
+        content="Sayan Maity's Portfolio Website"
       />
       <meta
         property="twitter:image"
-        content="https://ik.imagekit.io/sayancr777/tr:w-400/SheRise/Banner.jpg?updatedAt=1689688547059"
+        content="https://ik.imagekit.io/sayancr777/tr:w-400/Portfolio/portfolio_Banner.jpg?updatedAt=1692765968938"
       />
       <meta name="robots" content="Index" />
       <link rel="manifest" href="/manifest.json" />
 
       {/* Favicon : */}
-      <link rel="apple-touch-icon" sizes="120x120" href="./favicon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="./favicon.png" />
+      <link rel="apple-touch-icon" sizes="120x120" href="https://ik.imagekit.io/sayancr777/Portfolio/sayanLogo.jpg?updatedAt=1691434937632" />
+      <link rel="icon" type="image/png" sizes="32x32" href="https://ik.imagekit.io/sayancr777/Portfolio/sayanLogo.jpg?updatedAt=1691434937632" />
+      <link rel="icon" type="image/png" sizes="16x16" href="https://ik.imagekit.io/sayancr777/Portfolio/sayanLogo.jpg?updatedAt=1691434937632" />
     </Helmet>
   );
 };
