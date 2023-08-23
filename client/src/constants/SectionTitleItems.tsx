@@ -35,11 +35,11 @@ const sectionTitleItems: SectionTitleItem = {
     },
     certification: {
         mainTitle: "Certification",
-        summary: "These aren't just documents; these are the milestones I've crossed in the landscape of continuous self-improvement"
+        summary: "These aren't just documents 🗎; these are the milestones I've crossed in the landscape of continuous self-improvement 👦"
     },
     blog: {
         mainTitle: "Blogs",
-        summary: "Here's where my thoughts take flight, dancing on the pages with words as their partner 😋"
+        summary: "Here's where my thoughts take flight ✈️, dancing on the pages with words as their partner 😋"
     },
 }
 
