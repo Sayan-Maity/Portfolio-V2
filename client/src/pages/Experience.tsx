@@ -22,6 +22,7 @@ import sectionTitleItems from "../constants/SectionTitleItems";
 import { motion } from "framer-motion";
 import LoadingSkeletonEducation from "../components/SkeletonLoader/LoadingSkeletonEducation";
 import LoadingSkeletonVolunteer from "../components/SkeletonLoader/LoadingSkeletonVolunteer";
+import LoadingSkeletonCertificate from "../components/SkeletonLoader/LoadingSkeletonCertificate";
 
 const Experience = () => {
   const [experienceData, setExperienceData] = useState<ExperienceItem[]>([]);
@@ -30,7 +31,7 @@ const Experience = () => {
   const [openSourceData, setOpenSourceData] = useState<OpenSourceItem[]>([]);
   const [isLoadingExperienceData, setIsLoadingExperienceData] =
     useState<boolean>(true);
-  // const [isLoadingCertificateData, setIsLoadingCertificateData] = useState<boolean>(true);
+  const [isLoadingCertificateData, setIsLoadingCertificateData] = useState<boolean>(true);
   const [isLoadingVolunteerData, setIsLoadingVolunteerData] =
     useState<boolean>(true);
   const [isLoadingOpenSourceData, setIsLoadingOpenSourceData] =
@@ -53,7 +54,7 @@ const Experience = () => {
     axios
       .get(`${import.meta.env.VITE_SERVER_URL}/getCertification`)
       .then((res) => {
-        // setIsLoadingCertificateData(false);
+        setIsLoadingCertificateData(false);
         setCertificateData(res.data);
         // console.log("inner =>", res.data)
       })
@@ -417,7 +418,10 @@ const Experience = () => {
           summary={sectionTitleItems?.certification?.summary}
         />
         <div className=" certification">
-          {certificateData
+        {isLoadingCertificateData && (
+            <LoadingSkeletonCertificate />
+          )}
+          {!isLoadingCertificateData && certificateData
             .slice()
             .reverse()
             .map((certificate, index) => (

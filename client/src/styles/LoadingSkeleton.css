@@ -61,7 +61,7 @@
   }
   
 }
-/* ------------------------  Project  -------------------------- */
+/* ------------------------  Volunteer & Open Source  -------------------------- */
 .skeleton-style-volunteer {
   gap: 2rem;
   align-items: flex-start;
@@ -79,5 +79,42 @@
 @media screen and (max-width: 700px) {
   .skeleton-style-volunteer {
     flex-direction: column;
+  }
+}
+
+/* ------------------------  Certificate  -------------------------- */
+.skeleton-style-certificate {
+  display: flex;
+  flex-direction: row;
+  width: 1080px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  
+}
+.skeleton-style-certificate-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 31%;
+  align-items: flex-start;
+  border: 1px solid var(--border-color-regular);
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: #fff;
+}
+@media screen and (max-width: 1080px) {
+  .skeleton-style-certificate-inner {
+    width: 90% !important;
+  }
+  .skeleton-style-certificate-inner {
+    width: 45% !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .skeleton-style-certificate {
+    flex-direction: column !important;
+  }
+  .skeleton-style-certificate-inner {
+    width: 100% !important;
   }
 }
