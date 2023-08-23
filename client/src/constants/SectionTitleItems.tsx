@@ -31,7 +31,7 @@ const sectionTitleItems: SectionTitleItem = {
     },
     volunteering: {
         mainTitle: "Volunteering",
-        summary: "In the realm of selflessness 😃, I've worn the cape of a volunteer 👫, driven not by obligation but by the silent whispers of empathy 🤝"
+        summary: "In the realm of selflessness 😃, I've worn the cape of a volunteer 👫, driven not by obligation but by the silent whispers of empathy"
     },
     certification: {
         mainTitle: "Certification",
