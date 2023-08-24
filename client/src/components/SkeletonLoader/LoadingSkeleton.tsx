@@ -6,23 +6,17 @@ import "../../styles/LoadingSkeleton.css";
 const LoadingSkeleton = ({
   h1Count,
   pCount,
-  circleCount,
 }: ILoadingSkeletopnProps) => {
   return (
     <div className="skeleton-style">
-      <div>
-        <Skeleton
-          circle={true}
-          count={circleCount}
-          style={{ width: "4rem", height: "4rem"}}
-        />
-      </div>
-      <div style={{width: "100%", height: "auto"}} >
-        <h1 style={{width: "70%", marginBottom: "1rem" }}>
+
+      <div style={{ width: "100%", height: "auto" }} >
+        {h1Count > 0 && (<h1 style={{ width: "70%", marginBottom: "1rem" }}>
           <Skeleton count={h1Count} />
-        </h1>
-        <p style={{width: "100%", height: "auto"}} >
-          <Skeleton count={pCount} style={{marginBottom: "0.4rem"}}/>
+        </h1>)}
+
+        <p style={{ width: "100%", height: "auto" }} >
+          <Skeleton count={pCount} style={{ marginBottom: "0.4rem" }} />
         </p>
       </div>
     </div>

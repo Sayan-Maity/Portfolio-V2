@@ -395,7 +395,7 @@ const LandingPage = () => {
           }}
         >
           {isLoadingAchievementData && (
-            <LoadingSkeleton h1Count={1} pCount={3} circleCount={1} />
+            <LoadingSkeleton h1Count={0} pCount={4} />
           )}
           {!isLoadingAchievementData && (
             <div className="achievement_main">

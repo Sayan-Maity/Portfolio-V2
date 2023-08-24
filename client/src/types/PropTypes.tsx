@@ -23,7 +23,6 @@ export interface IReadMoreProps {
 export interface ILoadingSkeletopnProps {
     h1Count: number;
     pCount: number;
-    circleCount: number;
 }
 
 export interface ILoadingSkeletonVolunteerProps {
