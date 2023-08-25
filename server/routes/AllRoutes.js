@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router()
 const { getExperience } = require("../controllers/ExperienceController")
 const { getEducation } = require("../controllers/EducationController")
-const { getAchievement } = require("../controllers/AchievementController")
+const { getAchievement, postAchievement } = require("../controllers/AchievementController")
 const { getCertification } = require("../controllers/CertificationController")
 const { getVolunteer } = require("../controllers/VolunteeringController")
 const { postContactForm, getContactForm } = require("../controllers/ContactFormController")
@@ -14,6 +14,8 @@ const { getProjectLoop } = require("../controllers/ProjectLoopController")
 // Landing Page
 router.get("/getEducation", getEducation)
 router.get("/getAchievement", getAchievement)
+router.post("/postAchievement", postAchievement)
+
 
 // Experience Page
 router.get("/getExperience", getExperience)
