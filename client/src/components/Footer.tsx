@@ -10,7 +10,7 @@ import { fetchSocialLink } from "../store/SocialLinkSlice";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const dispatch = useDispatch();
-  const { data: socialLinkData, status } = useSelector((state: any) => state.socialLink)
+  const { data: socialLinkData } = useSelector((state: any) => state.socialLink)
   console.log("socialLinkData =>", socialLinkData)
 
   useEffect(() => {
