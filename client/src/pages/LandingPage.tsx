@@ -70,7 +70,7 @@ const LandingPage = () => {
         console.log(err);
       });
   }, []);
-  console.log("projectLoopData =>", projectLoopData);
+  // console.log("projectLoopData =>", projectLoopData);
 
   useEffect(() => {
     axios
@@ -102,7 +102,7 @@ const LandingPage = () => {
       // navigate(`/projects/Sayan`, {
       state: { data: data, wholeData: wholeData, index: index },
     });
-    console.log("Source data =>", data);
+    // console.log("Source data =>", data);
   };
 
   return (

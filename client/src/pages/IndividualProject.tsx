@@ -17,15 +17,15 @@ const IndividualProject = () => {
   const nextData = location.state.wholeData;
   const index = location.state.index;
 
-  console.log("Destination data =>", customData);
-  console.log("Destination nextData =>", nextData);
-  console.log("Destination index =>", index);
+  // console.log("Destination data =>", customData);
+  // console.log("Destination nextData =>", nextData);
+  // console.log("Destination index =>", index);
 
   const navigateWithData = (data: any, wholeData: any, index: number) => {
     navigate(`/projects/${data?.name}`, {
       state: { data: data, wholeData: wholeData, index: index },
     });
-    console.log("Source data =>", data);
+    // console.log("Source data =>", data);
   };
   return (
     <div>
