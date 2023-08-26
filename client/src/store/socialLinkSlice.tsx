@@ -31,7 +31,7 @@ export function fetchSocialLink () {
             const data = await res.json();
             dispatch(setSocialLink(data));
             dispatch(setStatus(STATUSES.IDLE));
-            console.log("Here it is =>", data)
+            // console.log("SocialLink data =>", data)
         } catch (error) {
             dispatch(setStatus(STATUSES.FAILED));
         }
