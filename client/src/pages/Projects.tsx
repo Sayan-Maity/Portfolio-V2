@@ -53,8 +53,19 @@ const Projects = () => {
   };
 
   const filteredProjects = projectLoopData.filter((data) => {
-    return (data.name.toLowerCase().includes(searchValue.toLowerCase()));
+    const searchValueLower = searchValue.toLowerCase();
+  
+    const techStackIncludesSearchValue = data.techstack.some((item: any) =>
+      item.toLowerCase().includes(searchValueLower)
+    );
+  
+    return (
+      data.name.toLowerCase().includes(searchValueLower) ||
+      data.summary.toLowerCase().includes(searchValueLower) ||
+      techStackIncludesSearchValue
+    );
   });
+  
 
   return (
     <div>
@@ -84,7 +95,7 @@ const Projects = () => {
 
           <div className="project-searchBar">
             <div className="project-searchBar-inner">
-            <BsSearch/><input type="text" value={searchValue} onChange={handleSearch} placeholder="Search your Projects here ..." />
+            <BsSearch/><input type="text" value={searchValue} onChange={handleSearch} placeholder="Search name, stack here ..." />
             </div>
           </div>
 
