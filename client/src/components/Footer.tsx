@@ -11,13 +11,14 @@ import { ISocialLinkState } from "../types/FileTypes";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const dispatch = useDispatch<Dispatch>();
+  const dispatch = useDispatch<any>();
   const { data: socialLinkData } = useSelector((state: ISocialLinkState) => state.socialLink)
   console.log("socialLinkData =>", socialLinkData)
 
   useEffect(() => {
     dispatch(fetchSocialLink());
   }, []);
+
   return (
     <footer>
       <div className="footer">
