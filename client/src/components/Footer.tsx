@@ -3,24 +3,18 @@ import { AiTwotoneHeart } from "react-icons/ai";
 import "../styles/Footer.css";
 import { Link } from "react-router-dom";
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { SocialLinkItem } from "../types/FileTypes";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSocialLink } from "../store/SocialLinkSlice";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [socialLinkData, setSocialLinkData] = useState<SocialLinkItem[]>([]);
+  const dispatch = useDispatch();
+  const { data: socialLinkData, status } = useSelector((state: any) => state.socialLink)
+  console.log("socialLinkData =>", socialLinkData)
 
   useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_SERVER_URL}/getSocialLink`)
-      .then((res) => {
-        setSocialLinkData(res.data);
-        // console.log("inner =>", res.data)
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    dispatch(fetchSocialLink());
   }, []);
   return (
     <footer>
