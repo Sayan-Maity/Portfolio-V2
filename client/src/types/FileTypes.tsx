@@ -127,3 +127,9 @@ export interface SectionTitleItem {
   certification: SectionTitleItemSubItem;
   blog: SectionTitleItemSubItem;
 }
+
+export const STATUSES = {
+  IDLE: 'idle',
+  LOADING: 'loading',
+  FAILED: 'failed',
+} as const;
