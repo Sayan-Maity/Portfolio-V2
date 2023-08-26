@@ -20,6 +20,7 @@ const Projects = () => {
   const [projectLoopData, setProjectLoopData] = useState<any[]>([]);
   const [originalLoopData, setOriginalLoopData] = useState<any[]>([]);
   const [isLoadingProjectData, setIsLoadingProjectData] = useState<boolean>(true);
+  const [searchValue, setSearchValue] = useState<string>("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -46,6 +47,14 @@ const Projects = () => {
     // console.log("Source data =>", data);
   };
 
+  const handleSearch = (e: any) => {
+    setSearchValue(e.target.value);
+  };
+
+  const filteredProjects = projectLoopData.filter((data) => {
+    return (data.name.toLowerCase().includes(searchValue.toLowerCase()) || data.summary.toLowerCase().includes(searchValue.toLowerCase()));
+  });
+
   return (
     <div>
       <Navbar />
@@ -71,12 +80,17 @@ const Projects = () => {
           summary={sectionTitleItems?.projects?.summary}
         />
         <section className="projects-page">
+
+          <div className="project-searchBar">
+            <input type="text" value={searchValue} onChange={handleSearch} placeholder="Search your Projects here ..." />
+          </div>
+
           {isLoadingProjectData && (
             <LoadingSkeletonProject />
           )}
           <div className="project_main">
             <div className="project_outer">
-              {!isLoadingProjectData && projectLoopData.map((projectLoop, index) => (
+              {!isLoadingProjectData && filteredProjects.map((projectLoop, index) => (
                 <div key={index} className="project_inner">
                   <div className="left">
                     <Link
