@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSocialLink } from "../store/socialLinkSlice";
+import { Dispatch } from "redux";
+import { fetchSocialLink } from "../store/SocialLinkSlice";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<Dispatch>();
   const { data: socialLinkData } = useSelector((state: any) => state.socialLink)
   console.log("socialLinkData =>", socialLinkData)
 

@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { STATUSES } from "../types/FileTypes";
+import { Dispatch } from "redux";
 
 const socialLinkSlice = createSlice({
     name: 'socialLink',
@@ -23,7 +24,7 @@ export default socialLinkSlice.reducer;
 
 // Thunks
 export function fetchSocialLink () {
-    return async function fetchSocialLinkThunk (dispatch: any) {
+    return async function fetchSocialLinkThunk (dispatch: Dispatch) {
         dispatch(setStatus(STATUSES.LOADING));
         try {
             const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/getSocialLink`);

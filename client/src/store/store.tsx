@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import socialLinkReducer from "./socialLinkSlice";
+import socialLinkReducer from "./SocialLinkSlice";
 
 const store = configureStore({
     reducer: {
