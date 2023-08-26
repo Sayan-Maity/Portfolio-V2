@@ -15,6 +15,7 @@ import parallaxItems from "../constants/ParallaxItems";
 import sectionTitleItems from "../constants/SectionTitleItems";
 import { motion } from "framer-motion";
 import LoadingSkeletonProject from "../components/SkeletonLoader/LoadingSkeletonProject";
+import { BsSearch } from 'react-icons/bs';
 
 const Projects = () => {
   const [projectLoopData, setProjectLoopData] = useState<any[]>([]);
@@ -52,7 +53,7 @@ const Projects = () => {
   };
 
   const filteredProjects = projectLoopData.filter((data) => {
-    return (data.name.toLowerCase().includes(searchValue.toLowerCase()) || data.summary.toLowerCase().includes(searchValue.toLowerCase()));
+    return (data.name.toLowerCase().includes(searchValue.toLowerCase()));
   });
 
   return (
@@ -82,7 +83,9 @@ const Projects = () => {
         <section className="projects-page">
 
           <div className="project-searchBar">
-            <input type="text" value={searchValue} onChange={handleSearch} placeholder="Search your Projects here ..." />
+            <div className="project-searchBar-inner">
+            <BsSearch/><input type="text" value={searchValue} onChange={handleSearch} placeholder="Search your Projects here ..." />
+            </div>
           </div>
 
           {isLoadingProjectData && (
