@@ -6,6 +6,8 @@ import { hotjar } from "react-hotjar";
 import { useEffect } from "react";
 import CustomRoutes from "./components/CustomRoutes";
 import { SkeletonTheme } from "react-loading-skeleton";
+import { Provider } from "react-redux";
+import store from "./store/store"
 
 function App() {
   // HotJar Integration :
@@ -20,10 +22,12 @@ function App() {
     <>
       <Toaster />
       <SkeletonTheme baseColor="#dddddd" highlightColor="#ebebeb">
-      <Router>
-        <SEO dynamicTitle="Sayan | Home" />
-        <CustomRoutes />
-      </Router>
+        <Provider store={store}>
+          <Router>
+            <SEO dynamicTitle="Sayan | Home" />
+            <CustomRoutes />
+          </Router>
+        </Provider>
       </SkeletonTheme>
     </>
   );
