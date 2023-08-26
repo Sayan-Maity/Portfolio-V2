@@ -28,7 +28,7 @@ const projectLoopSchema = new mongoose.Schema ({
                 require: true,
             },
             description: [],
-            techStack: [],
+            techstack: [],
         }
     ]
 
