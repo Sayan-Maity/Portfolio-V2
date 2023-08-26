@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Dispatch } from "redux";
-import { fetchSocialLink } from "../store/SocialLinkSlice";
+import { fetchSocialLink } from "../store/socialLinkSlice";
 import { ISocialLinkState } from "../types/FileTypes";
 
 const Footer = () => {
