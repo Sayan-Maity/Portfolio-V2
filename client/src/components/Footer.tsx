@@ -12,7 +12,6 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const dispatch = useDispatch<any>();
   const { data: socialLinkData } = useSelector((state: ISocialLinkState) => state.socialLink)
-  // console.log("socialLinkData =>", socialLinkData)
 
   useEffect(() => {
     dispatch(fetchSocialLink());

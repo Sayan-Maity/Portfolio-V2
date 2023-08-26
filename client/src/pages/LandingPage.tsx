@@ -17,7 +17,7 @@ import axios from "axios";
 import {
   AchievementItem,
   EducationItem,
-  SocialLinkItem,
+  ISocialLinkState,
 } from "../types/FileTypes";
 import "atropos/atropos.css";
 import FooterGap from "../components/FooterGap";
@@ -28,13 +28,14 @@ import LoadingSkeleton from "../components/SkeletonLoader/LoadingSkeleton";
 import LoadingSkeletonProject from "../components/SkeletonLoader/LoadingSkeletonProject";
 import { motion } from "framer-motion";
 import LoadingSkeletonEducation from "../components/SkeletonLoader/LoadingSkeletonEducation";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSocialLink } from "../store/socialLinkSlice";
 
 const LandingPage = () => {
   const [educationData, setEducationData] = useState<EducationItem[]>([]);
   const [achievementData, setAchievementData] = useState<AchievementItem[]>([]);
   const [projectLoopData, setProjectLoopData] = useState<any[]>([]);
   const [originalLoopData, setOriginalLoopData] = useState<any[]>([]);
-  const [socialLinkData, setSocialLinkData] = useState<SocialLinkItem[]>([]);
   const [isLoadingEducationData, setIsLoadingEducationData] =
     useState<boolean>(true);
   const [isLoadingAchievementData, setIsLoadingAchievementData] =
@@ -43,6 +44,9 @@ const LandingPage = () => {
     useState<boolean>(true);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch<any>();
+  const { data: socialLinkData } = useSelector((state: ISocialLinkState) => state.socialLink)
+
 
   useEffect(() => {
     axios
@@ -86,15 +90,7 @@ const LandingPage = () => {
   }, []);
 
   useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_SERVER_URL}/getSocialLink`)
-      .then((res) => {
-        setSocialLinkData(res.data);
-        // console.log("inner =>", res.data)
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    dispatch(fetchSocialLink());
   }, []);
 
   const navigateWithData = (data: any, wholeData: any, index: number) => {
