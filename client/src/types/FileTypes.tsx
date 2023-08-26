@@ -133,3 +133,10 @@ export const STATUSES = {
   LOADING: 'loading',
   FAILED: 'failed',
 } as const;
+
+export interface ISocialLinkState {
+  socialLink: {
+    data: SocialLinkItem[];
+    status: string;
+  }
+}

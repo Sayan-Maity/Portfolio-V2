@@ -7,11 +7,12 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Dispatch } from "redux";
 import { fetchSocialLink } from "../store/SocialLinkSlice";
+import { ISocialLinkState } from "../types/FileTypes";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const dispatch = useDispatch<Dispatch>();
-  const { data: socialLinkData } = useSelector((state: any) => state.socialLink)
+  const { data: socialLinkData } = useSelector((state: ISocialLinkState) => state.socialLink)
   console.log("socialLinkData =>", socialLinkData)
 
   useEffect(() => {
