@@ -140,3 +140,8 @@ export interface ISocialLinkState {
     status: string;
   }
 }
+
+export interface IGPTResponse {
+  isUser: boolean;
+  text: string;
+}
