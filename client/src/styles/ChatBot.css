@@ -200,7 +200,7 @@
     margin-right: 1rem;
   }
   .box-outerDiv .box-description{
-    background-color: red;
+    /* background-color: red; */
     margin-right: 0.5rem;
   }
   .chatBot-outerDiv .chatBot-innerDiv {
