@@ -9,6 +9,7 @@ const { postContactForm, getContactForm } = require("../controllers/ContactFormC
 const { getOpenSource } = require("../controllers/OpenSourceController")
 const { getSocialLink } = require("../controllers/SocialLinkController")
 const { getProjectLoop } = require("../controllers/ProjectLoopController")
+const { chatCompletion } = require("../controllers/ChatBotController")
 
 
 // Landing Page
@@ -18,6 +19,7 @@ router.post("/postAchievement", postAchievement)
 
 
 // Experience Page
+router.post("/chatCompletion", chatCompletion)
 router.get("/getExperience", getExperience)
 router.get("/getCertification", getCertification)
 router.get("/getVolunteer", getVolunteer)
