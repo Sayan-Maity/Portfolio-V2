@@ -30,6 +30,7 @@ import { motion } from "framer-motion";
 import LoadingSkeletonEducation from "../components/SkeletonLoader/LoadingSkeletonEducation";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSocialLink } from "../store/socialLinkSlice";
+import ChatBot from "../components/ChatBot";
 
 const LandingPage = () => {
   const [educationData, setEducationData] = useState<EducationItem[]>([]);
@@ -42,6 +43,7 @@ const LandingPage = () => {
     useState<boolean>(true);
   const [isLoadingProjectData, setIsLoadingProjectData] =
     useState<boolean>(true);
+  const [openChatoBot, setOpenChatoBot] = useState<boolean>(false);
 
   const navigate = useNavigate();
   const dispatch = useDispatch<any>();
@@ -116,6 +118,10 @@ const LandingPage = () => {
           },
         }}
         style={{ width: "100%", background: "#f4f4f4" }}>
+
+        {/* --------------  Chat Bot  ------------ */}
+        <ChatBot />
+
         {/* --------------  Landing Section  ------------ */}
         <div className="landing-div">
           <div
