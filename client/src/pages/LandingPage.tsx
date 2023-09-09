@@ -43,7 +43,6 @@ const LandingPage = () => {
     useState<boolean>(true);
   const [isLoadingProjectData, setIsLoadingProjectData] =
     useState<boolean>(true);
-  const [openChatoBot, setOpenChatoBot] = useState<boolean>(false);
 
   const navigate = useNavigate();
   const dispatch = useDispatch<any>();

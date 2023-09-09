@@ -105,17 +105,17 @@ const ChatBot = () => {
         }
     };
 
-    const customUserMessages = [
-        { id: 1, message: "Tell your hobbies" },
-        { id: 2, message: "Do you go Gym?" },
-        { id: 3, message: "Wanna go on a coffee date with me?" },
-        { id: 4, message: "Can I be your friend?" },
-        { id: 5, message: "I love you" },
-        { id: 6, message: "Which food you enjoy the most?" },
-        { id: 7, message: "Do you believe in paranormal acitvities?" },
-        { id: 8, message: "Ever thought of space exploration?" },
-        { id: 9, message: "WFH or remote?" },
-    ]
+    // const customUserMessages = [
+    //     { id: 1, message: "Tell your hobbies" },
+    //     { id: 2, message: "Do you go Gym?" },
+    //     { id: 3, message: "Wanna go on a coffee date with me?" },
+    //     { id: 4, message: "Can I be your friend?" },
+    //     { id: 5, message: "I love you" },
+    //     { id: 6, message: "Which food you enjoy the most?" },
+    //     { id: 7, message: "Do you believe in paranormal acitvities?" },
+    //     { id: 8, message: "Ever thought of space exploration?" },
+    //     { id: 9, message: "WFH or remote?" },
+    // ]
 
     return (
         <section className="chatBot-outerDiv" >
