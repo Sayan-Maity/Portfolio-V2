@@ -16,10 +16,10 @@ const { chatCompletion } = require("../controllers/ChatBotController")
 router.get("/getEducation", getEducation)
 router.get("/getAchievement", getAchievement)
 router.post("/postAchievement", postAchievement)
+router.post("/chatCompletion", chatCompletion)
 
 
 // Experience Page
-router.post("/chatCompletion", chatCompletion)
 router.get("/getExperience", getExperience)
 router.get("/getCertification", getCertification)
 router.get("/getVolunteer", getVolunteer)
