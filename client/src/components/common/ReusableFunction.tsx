@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export function formatTimestamp(timestamp: string) {
   const months = [
     "Jan",
@@ -35,4 +37,27 @@ export function calculateReadingTime(paragraph: string) {
   const estimatedTime = Math.ceil(wordCount / wordsPerMinute);
 
   return estimatedTime;
+}
+
+export function ChatBotTimeStamp() {
+  const [time, setTime] = useState<string>("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const amOrPm = hours >= 12 ? "PM" : "AM";
+      const formattedHours = hours % 12 || 12;
+      const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+      const gptResponseTime = `${formattedHours}:${formattedMinutes} ${amOrPm}`;
+      setTime(gptResponseTime);
+    }, 800);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
+  return <>{time}</>;
 }
