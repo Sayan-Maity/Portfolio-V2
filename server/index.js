@@ -5,7 +5,8 @@ dotenv.config();
 const PORT = process.env.PORT || 3002
 const cors = require("cors")
 const bodyParser = require("body-parser");
-const { connectToDatabase } = require("./DB");
+// const { connectToDatabase } = require("./DB");
+const mongoose = require('mongoose')
 const routes = require("./routes/AllRoutes")
 
 
@@ -24,20 +25,19 @@ app.get("/", (req, res) => {
 
 
 // Database connection
-connectToDatabase().then(() => {
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-    });
-});
+mongoose.connect(process.env.MONGODB_URI)
+.then(() => {
+    console.log("Database connected")
+})
+.catch((err) => {
+    console.log(err)
+})
 
-// mongoose.connect(process.env.MONGODB_URI)
-// .then(() => {
-//     console.log("Database connected")
-// })
-// .catch((err) => {
-//     console.log(err)
-// })
-
-// app.listen(PORT, () => {
-//     console.log(`Server is running on port ${PORT}`)
-// })
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`)
+})
+// connectToDatabase().then(() => {
+//     app.listen(PORT, () => {
+//         console.log(`Server running on port ${PORT}`);
+//     });
+// });
