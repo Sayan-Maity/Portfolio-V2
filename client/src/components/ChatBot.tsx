@@ -73,7 +73,7 @@ const ChatBot = () => {
         try {
             setLoading(true);
             const response = await axios.post(
-                `${import.meta.env.VITE_SERVER_URL}/api/chatCompletion`,
+                `${import.meta.env.VITE_SERVER_URL}/chatCompletion`,
                 // `http://localhost:3002/api/chatCompletion`,
                 {
                     userPrompt: message,
