@@ -18,6 +18,31 @@ function App() {
     );
   }, []);
 
+  useEffect(() => {
+    const audio = new Audio("./greedy_audio.mp3");
+    const playAudio = () => {
+      audio.play();
+    };
+
+    // Trigger audio playback on user interaction, e.g., button click
+    document.addEventListener('click', playAudio);
+
+    // Check if audio was playing before
+    const isAudioPlaying = localStorage.getItem('isAudioPlaying');
+
+    if (isAudioPlaying === 'true') {
+      audio.play();
+    }
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('click', playAudio);
+      audio.pause();
+      audio.currentTime = 0;
+      localStorage.setItem('isAudioPlaying', 'false');
+    };
+  }, []);
+
   return (
     <>
       <Toaster />
