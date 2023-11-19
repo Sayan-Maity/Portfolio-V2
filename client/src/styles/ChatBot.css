@@ -143,12 +143,38 @@
 }
 .box-outerDiv .box {
   background-color: var(--color-hightlighter);
+  background-image: url("https://ik.imagekit.io/sayancr777/tr:w-400/Portfolio/sayan.jpg?updatedAt=1691154907703");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: contrast(0.7);
+  animation: rotateBox 30s linear infinite, blinkLight 3s infinite;
+
   height: 4.5rem;
   width: 4.55rem;
   border-radius: 50%;
   border: 3px solid var(--color-dark);
   cursor: pointer;
 }
+
+@keyframes rotateBox {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blinkLight {
+  0%, 100% {
+    filter: contrast(0.7);
+  }
+  50% {
+    filter: contrast(1);
+  }
+}
+
 .box-outerDiv .box-description {
   position: absolute;
   width: 14rem;
@@ -199,7 +225,7 @@
   .chatBot-outerDiv .chatBot-innerDiv .box {
     margin-right: 1rem;
   }
-  .box-outerDiv .box-description{
+  .box-outerDiv .box-description {
     /* background-color: red; */
     margin-right: 0.5rem;
   }
