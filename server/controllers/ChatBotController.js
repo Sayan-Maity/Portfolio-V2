@@ -44,7 +44,7 @@ module.exports.chatCompletion = async (req, res) => {
         // jsonParser(content);
       } else {
         console.log("No valid candidate found");
-        res.status(500).json({ error: "Internal Server Error" });
+        res.status(500).json({ error: "Sorry I can't assist you with this..." });
       }
     } else {
       console.log("Invalid response format");
