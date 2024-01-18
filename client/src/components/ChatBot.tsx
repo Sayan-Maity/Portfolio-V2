@@ -94,10 +94,10 @@ const ChatBot = () => {
             });
             setGptResponse((prev) => [
                 ...prev,
-                { isUser: false, text: response.data.gptPrompt.content },
+                { isUser: false, text: response.data.content },
             ]);
             setLoading(false);
-            console.log(gptResponse);
+            // console.log(response.data.content);
         } catch (error: any) {
             toast.error(error.message);
             setLoading(false);
