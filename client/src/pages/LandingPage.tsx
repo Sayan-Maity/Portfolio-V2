@@ -96,7 +96,6 @@ const LandingPage = () => {
 
   const navigateWithData = (data: any, wholeData: any, index: number) => {
     navigate(`/projects/${data?.name}`, {
-      // navigate(`/projects/Sayan`, {
       state: { data: data, wholeData: wholeData, index: index },
     });
     // console.log("Source data =>", data);
