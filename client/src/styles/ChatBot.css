@@ -237,6 +237,9 @@
   .chatBot-outerDiv .chatBot-innerDiv {
     height: calc(100vh - 6.4rem);
   }
+  .chatBot-outerDiv {
+    transform: translateY(-4rem);
+  }
 }
 @media screen and (max-width: 400px) {
   .chatBot-outerDiv .chatBot-innerDiv .chat-body {
