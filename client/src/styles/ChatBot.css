@@ -14,7 +14,7 @@
   /* height: calc(100vh - 6.8rem); */
   gap: 1rem;
   z-index: 10 !important;
-  background-color: red;
+  /* background-color: red; */
   bottom: 0;
 }
 
