@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
+  position: absolute;
 }
 .chatBot-outerDiv .chatBot-innerDiv {
   display: flex;
@@ -10,17 +11,18 @@
   width: 1080px;
   float: right;
   position: fixed;
-  height: calc(100vh - 6.8rem);
-  align-items: flex-end;
+  /* height: calc(100vh - 6.8rem); */
   gap: 1rem;
   z-index: 10 !important;
-  /* background-color: red; */
+  background-color: red;
+  bottom: 0;
 }
 
 .chatBot-outerDiv .chatBot-innerDiv .chat-body {
   /* box-shadow: 0 0 5px #d7d7d7; */
+  right: 0;
   height: 28rem;
-  background-color: #fff;
+  /* background-color: #fff; */
   width: 20rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 50px;
