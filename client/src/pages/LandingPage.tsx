@@ -31,6 +31,7 @@ import LoadingSkeletonEducation from "../components/SkeletonLoader/LoadingSkelet
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSocialLink } from "../store/socialLinkSlice";
 import ChatBot from "../components/ChatBot";
+import { FaMedium } from "react-icons/fa6";
 
 const LandingPage = () => {
   const [educationData, setEducationData] = useState<EducationItem[]>([]);
@@ -47,6 +48,8 @@ const LandingPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch<any>();
   const { data: socialLinkData } = useSelector((state: ISocialLinkState) => state.socialLink)
+
+  console.log("socialLinkData =>", socialLinkData)
 
 
   useEffect(() => {
@@ -235,31 +238,43 @@ const LandingPage = () => {
               >
                 <Link
                   to={socialLinkData[0]?.links[0]?.github}
+                  title="github"
                   style={{ fontSize: "1.4rem", color: "#111" }}
                   target="_blank"
-                >
+                  >
                   <BsGithub />
                 </Link>
                 <Link
                   to={socialLinkData[0]?.links[1]?.linkedin}
+                  title="linkedin"
                   style={{ fontSize: "1.4rem", color: "#111" }}
                   target="_blank"
-                >
+                  >
                   <BsLinkedin />
                 </Link>
                 <Link
                   to={socialLinkData[0]?.links[2]?.twitter}
+                  title="twitter"
                   style={{ fontSize: "1.4rem", color: "#111" }}
                   target="_blank"
-                >
+                  >
                   <BsTwitter />
                 </Link>
                 <Link
                   to={socialLinkData[0]?.links[3]?.instagram}
+                  title="instagram"
+                  style={{ fontSize: "1.4rem", color: "#111" }}
+                  target="_blank"
+                  >
+                  <BsInstagram />
+                </Link>
+                <Link
+                  to={socialLinkData[0]?.links[5]?.medium}
+                  title="medium"
                   style={{ fontSize: "1.4rem", color: "#111" }}
                   target="_blank"
                 >
-                  <BsInstagram />
+                  <FaMedium />
                 </Link>
               </div>
             </div>
